@@ -3,3 +3,13 @@
 body {
     font-family: 'PT Sans', sans-serif;
 }
+
+form#login-form {
+    display: grid;
+    grid-template-columns: 300px;
+    row-gap: 0.5rem;
+}
+
+form#login-form > input{
+    margin-bottom: 1rem;
+}
