@@ -1,7 +1,9 @@
 import React from 'react'
 import { withSignIn } from 'react-auth-kit'
+import {connect} from 'react-redux';
+import {userPostFetch} from './redux/Actions';
 
-class LoginForm extends React.Component {
+class Login extends React.Component {
     constructor(props) {
         super(props)
 
@@ -55,4 +57,4 @@ class LoginForm extends React.Component {
     }
 }
 
-export default withSignIn(LoginForm)
+export default Login

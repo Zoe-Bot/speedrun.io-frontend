@@ -8,9 +8,8 @@ import {
 } from "react-router-dom";
 import Home from './Home'
 import Users from './Users'
-import LoginForm from './LoginForm'
-
-
+import Login from './Login'
+import Signup from './Signup';
 
 const App = () => {
     return (
@@ -21,19 +20,15 @@ const App = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/users">Users</Link></li>
                         <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/signup">Signup</Link></li>
                     </ul>
                 </nav>
 
                 <Switch>
-                    <Route path="/login">
-                        <LoginForm />
-                    </Route>
-                    <Route path="/users">
-                        <Users />
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
+                    <Route path="/signup" component={Signup} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/users" component={Users} />
+                    <Route path="/" component={Home} />
                 </Switch>
             </Router>
         </div>
