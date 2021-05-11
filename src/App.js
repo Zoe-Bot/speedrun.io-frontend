@@ -1,34 +1,35 @@
+// React
 import React from 'react'
 import { render } from 'react-dom'
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
-    Link
+    Switch
 } from "react-router-dom";
-import Home from './Home'
-import Users from './Users'
-import Login from './Login'
-import Signup from './Signup';
+
+// Pages
+import HomePage from './pages/HomePage'
+import MapsListPage from './pages/MapsListPage'
+import MapPage from './pages/MapPage'
+import Login from './pages/Login'
+import Register from '/pages/Register'
+import ErrorPage from './pages/ErrorPage'
+
+// Components
+import NavBar from './Navbar'
 
 const App = () => {
     return (
         <div>
             <Router>
-                <nav>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/users">Users</Link></li>
-                        <li><Link to="/login">Login</Link></li>
-                        <li><Link to="/signup">Signup</Link></li>
-                    </ul>
-                </nav>
-
+            <NavBar />
                 <Switch>
-                    <Route path="/signup" component={Signup} />
+                    <Route path="/maps-list" component={MapsListPage} />
+                    <Route path="/map/:id" component={MapPage} />
+                    <Route path="/register" component={Register} />
                     <Route path="/login" component={Login} />
-                    <Route path="/users" component={Users} />
-                    <Route path="/" component={Home} />
+                    <Route path="/" component={HomePage} exact />
+                    <Route component={ErrorPage} />
                 </Switch>
             </Router>
         </div>
