@@ -26,7 +26,6 @@ const App = () => {
     const {token, setToken} = useToken()
     console.log("token", token)
 
-    // TODO: Logout with sessionStorage.clear()
     if(!token)
         return <Login setToken={setToken} />
 
