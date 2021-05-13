@@ -1,5 +1,5 @@
 // React
-import React, { useState } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 import {
     BrowserRouter as Router,
@@ -19,18 +19,12 @@ import ErrorPage from './pages/ErrorPage'
 // Components
 import NavBar from './Navbar'
 
-function setToken(userToken) {
-    sessionStorage.setItem('token', JSON.stringify(userToken))
-}
-
-function getToken() {
-    const tokenString = sessionStorage.getItem('token')
-    const userToken = JSON.parse(tokenString)
-    return userToken?.token
-}
+//Custom Hook
+import useToken from './customHooks/useToken'
 
 const App = () => {
-    const token = getToken()
+    const {token, setToken} = useToken()
+    console.log("token", token)
 
     // TODO: Logout with sessionStorage.clear()
     if(!token)
