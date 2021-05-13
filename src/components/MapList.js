@@ -16,7 +16,7 @@ const MapList = () => {
     }, [])
     
     return (
-        <table>
+        <table className="table">
             <thead>
                 <tr>
                     <th>Mapname</th>
