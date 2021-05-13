@@ -19,9 +19,20 @@ import ErrorPage from './pages/ErrorPage'
 // Components
 import NavBar from './Navbar'
 
-const App = () => {
-    const [token, setToken] = useState();
+function setToken(userToken) {
+    sessionStorage.setItem('token', JSON.stringify(userToken))
+}
 
+function getToken() {
+    const tokenString = sessionStorage.getItem('token')
+    const userToken = JSON.parse(tokenString)
+    return userToken?.token
+}
+
+const App = () => {
+    const token = getToken()
+
+    // TODO: Logout with sessionStorage.clear()
     if(!token)
         return <Login setToken={setToken} />
 
