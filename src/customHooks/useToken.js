@@ -11,7 +11,6 @@ const useToken = () => {
 
     const saveToken = (userToken) => {
         localStorage.setItem('token', JSON.stringify(userToken))
-        console.log(userToken)
         setToken(userToken)
     }
     
