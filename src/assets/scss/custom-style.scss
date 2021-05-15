@@ -7,3 +7,33 @@ form#login-form {
 form#login-form > input{
     margin-bottom: 1rem;
 }
+
+body {
+    letter-spacing: 1px;
+}
+
+// Nav
+nav {
+    #navbarNav.navbar-collapse {
+        // Button
+        button.btn {
+            a {
+                font-size: 13px;
+                letter-spacing: 1.25px;
+            }
+            &:hover, &:focus, &:active {
+                color: #4561EE;
+                background-color: #4561EE;
+                border: 1px solid #4561EE;
+                box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
+                transform: translate(0, -5px);
+                transition: transform 0.1s ease;
+            }
+        }
+
+        // Link
+        a#register:hover {
+            text-decoration: underline!important;
+        }
+    }
+}

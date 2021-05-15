@@ -7,6 +7,9 @@ import {
     Switch
 } from "react-router-dom";
 
+//Bootstrap js
+import 'bootstrap';
+
 // Pages
 import Index from './pages/Index'
 import Game from './pages/Game';
