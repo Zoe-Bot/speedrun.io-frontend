@@ -1,18 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap");
 
-body {
-    font-family: 'PT Sans', sans-serif;
-}
 
-form#login-form {
-    display: grid;
-    grid-template-columns: 300px;
-    row-gap: 0.5rem;
-}
+//Colors
+$theme-colors: (
+        "primary": #4561EE, //dark violett
+        "secondary": #DC59CB, //dark pink
+        "info": #5D78FF, // light violett
+        "dark": #0D1527, //dark blue
+        "success": #57EBE6 // cyan
+);
 
-form#login-form > input{
-    margin-bottom: 1rem;
-}
+//Body
+$body-bg: #0D1527; //background dark blue
+$body-color: #FFF; //body font white
+
+//Font
+$font-family-sans-serif: 'Poppins', sans-serif; //font text
+$headings-font-family: 'Poppins', sans-serif; //font headings
+$headings-font-weight: 600; //semibold headings
+$font-weight-bolder: 600; //font semibold
+
+//Border
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+//Navbar
+$navbar-dark-color: rgba(255, 255, 255, 0.7);
+$navbar-dark-hover-color: #FFF;
+$navbar-dark-active-color: #FC5421;
+
+$navbar-nav-link-padding-x: 1rem;
+
+$navbar-light-toggler-border-color: transparent;
 
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+//Button
+$btn-font-size: 20px; //button_icons font size
+$btn-font-size-sm: 18px; //button_icons font size sm
+
+$btn-padding-y: 0.5rem; //button_icons paddings
+$btn-padding-x: 2.75rem;
+$btn-padding-y-sm: 0.25rem;
+$btn-padding-x-sm: 2.5rem;
+
+$btn-border-radius: 0px; //button_icons angular
+
+$btn-border-width: 2px; //button_icons border 2px
+
+
+//Input Form
+$input-bg: none;
+$input-border-width: 0;
+$input-box-shadow: none;
+
+
+//Cards
+$card-border-width: none;
+$card-border-radius: 0;
+
+
+//Nav Tabs
+$nav-tabs-border-color: #FC5421;
+$nav-tabs-border-width: 2px;
+$nav-tabs-link-hover-border-color: none;
+$nav-tabs-link-active-border-color: #FC5421;
+
+$nav-tabs-link-active-color: #FC5421;
+
+
+//utility
+$utilities: (
+        "opacity": (
+                property: opacity,
+                responsive: true,
+                values: (
+                        0: 0,
+                        25: .25,
+                        50: .5,
+                        70: .70,
+                        100: 1,
+                )
+        )
+);
+
+@import './custom-style';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
