@@ -7,7 +7,8 @@ $theme-colors: (
         "secondary": #DC59CB, //dark pink
         "info": #5D78FF, // light violett
         "dark": #0D1527, //dark blue
-        "success": #57EBE6 // cyan
+        "success": #57EBE6, // cyan
+        "light": rgba(255, 255, 255, 0.4)
 );
 
 //Body
@@ -26,9 +27,9 @@ $border-radius-lg: 0;
 $border-radius-sm: 0;
 
 //Navbar
-$navbar-dark-color: rgba(255, 255, 255, 0.7);
-$navbar-dark-hover-color: #FFF;
-$navbar-dark-active-color: #FC5421;
+$navbar-dark-color: #FFF;
+$navbar-dark-hover-color: #4561EE;
+$navbar-dark-active-color: #5D78FF;
 
 $navbar-nav-link-padding-x: 1rem;
 
@@ -36,17 +37,10 @@ $navbar-light-toggler-border-color: transparent;
 
 
 //Button
-$btn-font-size: 20px; //button_icons font size
-$btn-font-size-sm: 18px; //button_icons font size sm
+$btn-font-size: 16px;
 
-$btn-padding-y: 0.5rem; //button_icons paddings
-$btn-padding-x: 2.75rem;
-$btn-padding-y-sm: 0.25rem;
-$btn-padding-x-sm: 2.5rem;
-
-$btn-border-radius: 0px; //button_icons angular
-
-$btn-border-width: 2px; //button_icons border 2px
+$btn-padding-x: 3rem;
+$btn-border-radius: 0px;
 
 
 //Input Form
