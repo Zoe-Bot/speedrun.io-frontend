@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import useState from 'react-usestateref'
-import ErrorPage from './ErrorPage'
 
-const MapPage = ({ match }) => {
+const MapOverview = ({ match }) => {
     const id = match.params.id
     const [map, setMap, mapRef] = useState()
 
@@ -11,7 +10,7 @@ const MapPage = ({ match }) => {
             const result = await fetch(`http://localhost:3000/v1/maps/frontend/${id}`)
             const body = await result.json()
             setMap(body[0])
-            console.log(mapRef.current)
+            console.log("map", mapRef.current)
         }
         fetchMap()
     }, [id])
@@ -37,7 +36,6 @@ const MapPage = ({ match }) => {
                         </thead>
                         <tbody>
                             {map.highscores.map((highscore, key) => {
-                                //TODO: make own component for this
                                 return <tr key={key}>
                                         <td>{highscore.score}</td>
                                         <td>{highscore.user.username}</td>
@@ -52,4 +50,4 @@ const MapPage = ({ match }) => {
 
 }
 
-export default MapPage
+export default MapOverview

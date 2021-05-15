@@ -10,7 +10,6 @@ const MapList = () => {
             const result = await fetch('http://localhost:3000/v1/maps')
             const body = await result.json()
             setMaps(body)
-            console.log(mapsRef)
         }
         fetchMaps()
     }, [])
