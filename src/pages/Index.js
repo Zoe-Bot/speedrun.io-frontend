@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomePage = ({ props }) => {
+const Index = ({ props }) => {
     return (
         <>
             <h1>Home</h1>
@@ -8,4 +8,4 @@ const HomePage = ({ props }) => {
     )
 }
 
-export default HomePage
+export default Index
