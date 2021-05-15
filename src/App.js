@@ -16,7 +16,7 @@ import Register from '/pages/Register'
 import Profile from './pages/Profile';
 import ErrorPage from './pages/ErrorPage'
 
-// Components
+// Component
 import NavBar from './Navbar'
 
 //Custom Hook
