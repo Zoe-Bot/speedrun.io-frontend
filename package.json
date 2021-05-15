@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "sass": "sass --watch src/style.scss src/style.css"
+    "sass": "sass --watch src/assets/scss/style.scss src/assets/css/style.css"
   },
   "keywords": [],
   "author": "",
