@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router'
 import { Link } from 'react-router-dom'
+import SubmitButton from '../components/SubmitButton'
 import useToken from '../customHooks/useToken'
 
 // TODO: Move to useEffects
@@ -27,35 +27,39 @@ const Login = (props) => {
             username,
             password
         })
-
-        if (token.access_token != " ") {
+        if (token.access_token) {
             setToken(token)
             props.history.push('/');
-            window.location.reload();
-        }
-        else
+            //window.location.reload();
+        } else
             document.querySelector('#login-form small').style.display = 'block'
     }
 
-
     return (
-        <div className="container vh-100">
-            <div className="row">
+        <div className="container d-flex flex-column min-vh-100 my-5 py-lg-5">
+            <div className="row login-form-container mx-auto mb-4">
                 <div className="col-12">
                     <h1 className="fst-italic">Welcome back</h1>
                     <h6 className="fst-italic">New here? <Link to="/register">Register</Link></h6>
                 </div>
             </div>
-            <form id="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" placeholder="Enter username..." onChange={e => setUsername(e.target.value)} required />
-
-                <label htmlFor="password">Passwort</label>
-                <input type="password" name="password" placeholder="Enter password..." onChange={e => setPassword(e.target.value)} required />
-
-                <button type="submit">Submit</button>
-                <small style={{ display: 'none' }}>Login Failed!</small>
-            </form>
+            <div className="row login-form-container mx-auto">
+                <div className="col-12">
+                    <form id="login-form" onSubmit={handleSubmit}>
+                        <div className="mb-3">
+                            <label htmlFor="username" className="form-label fst-italic fw-bolder">Username</label>
+                            <input type="text" className="form-control" id="username" name="username" placeholder="Username" aria-describedby="username" onChange={e => setUsername(e.target.value)} required />
+                        </div>
+                        <div id="form-grid-password" className="mb-3">
+                            <label htmlFor="password" className="form-label fst-italic fw-bolder">Passwort</label>
+                            <Link className="text-muted text-end" to="/">Forgott password</Link>
+                            <input type="password" className="form-control" id="password" name="password" placeholder="Password..." onChange={e => setPassword(e.target.value)} required />
+                        </div>
+                        <small className="invalid-feedback pb-2" style={{ display: 'none' }}>Wrong username or password!</small>
+                        <SubmitButton text="Sign in" />
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }

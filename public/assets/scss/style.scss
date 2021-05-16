@@ -44,23 +44,16 @@ $btn-border-radius: 0px;
 
 
 //Input Form
-$input-bg: none;
+$input-bg: rgba(69, 97, 238, 0.12);
 $input-border-width: 0;
 $input-box-shadow: none;
+$input-btn-focus-box-shadow: none;
+
 
 
 //Cards
 $card-border-width: none;
 $card-border-radius: 0;
-
-
-//Nav Tabs
-$nav-tabs-border-color: #FC5421;
-$nav-tabs-border-width: 2px;
-$nav-tabs-link-hover-border-color: none;
-$nav-tabs-link-active-border-color: #FC5421;
-
-$nav-tabs-link-active-color: #FC5421;
 
 
 //utility
