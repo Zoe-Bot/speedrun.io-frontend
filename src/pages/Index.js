@@ -13,7 +13,6 @@ const Index = () => {
                             <span className="skew-fix">Play now</span>
                         </Link>
                     </div>
-                        
                 </div>
             </div>
         </div>

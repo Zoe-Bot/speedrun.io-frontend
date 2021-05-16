@@ -19,24 +19,24 @@ const Footer = () => (
             <div className="col">
                 <h5 className="fst-italic">Games</h5>
                 <ul className="list-unstyled">
-                    <li><Link className="text-primary fw-bolder" to="/game">dope</Link></li>
+                    <li><Link to="/game">dope</Link></li>
                 </ul>
             </div>
             <div className="col">
             <h5 className="fst-italic">Pages</h5>
                 <ul className="list-unstyled">
-                    <li><Link className="text-primary fw-bolder" to="/leaderboard">Leaderboard</Link></li>
-                    <li><Link className="text-primary fw-bolder" to="/maps">Maps</Link></li>
-                    <li><Link className="text-primary fw-bolder" to="/login">Login</Link></li>
-                    <li><Link className="text-primary fw-bolder" to="/register">Register</Link></li>
+                    <li><Link to="/leaderboard">Leaderboard</Link></li>
+                    <li><Link to="/maps">Maps</Link></li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
                 </ul>
             </div>
             <div className="col">
             <h5 className="fst-italic">Others</h5>
                 <ul className="list-unstyled">
-                    <li><Link className="text-primary fw-bolder" to="/">Imprint</Link></li>
-                    <li><Link className="text-primary fw-bolder" to="/">Data policies</Link></li>
-                    <li><Link className="text-primary fw-bolder" to="/">Terms and Rules</Link></li>
+                    <li><Link to="/">Imprint</Link></li>
+                    <li><Link to="/">Data policies</Link></li>
+                    <li><Link to="/">Terms and Rules</Link></li>
                 </ul>
             </div>
         </div>
