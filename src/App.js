@@ -28,7 +28,7 @@ import PrivateRoute from './components/PrivateRoute'
 import useToken from './customHooks/useToken'
 
 const App = () => {
-    const {token, setToken, isToken} = useToken()
+    const {token, setToken} = useToken()
     console.log("token", token)
 
     return (

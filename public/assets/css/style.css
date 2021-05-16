@@ -1,15 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap");
-form#login-form {
-  display: grid;
-  grid-template-columns: 300px;
-  row-gap: 0.5rem;
-}
-
-form#login-form > input {
-  margin-bottom: 1rem;
-}
-
 body {
   letter-spacing: 1px;
 }
@@ -17,11 +7,27 @@ body {
 a {
   color: #4561ee !important;
   text-decoration: none !important;
-  font-weight: 600;
 }
 a:hover {
   color: #4561ee;
   text-decoration: underline;
+}
+
+input.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.44);
+}
+
+button.btn.btn-primary {
+  font-size: 13px;
+  letter-spacing: 1.25px;
+}
+button.btn.btn-primary:hover, button.btn.btn-primary:focus, button.btn.btn-primary:active {
+  color: #fff;
+  background-color: #4561ee;
+  border: 1px solid #4561ee;
+  box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
+  transform: translate(0, -5px);
+  transition: transform 0.1s ease;
 }
 
 nav #navbarNav.navbar-collapse a#login {
@@ -63,8 +69,26 @@ nav #navbarNav.navbar-collapse a#register:hover {
   border: none;
 }
 
+#login-form #form-grid-password {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#login-form #form-grid-password input {
+  grid-column: 1/3;
+}
+
+.login-form-container {
+  width: 600px;
+}
+
+@media (max-width: 992px) {
+  .login-form-container {
+    width: 100%;
+  }
+}
 /*!
- * Bootstrap v5.0.0 (https://getbootstrap.com/)
+ * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -1982,6 +2006,7 @@ progress {
 }
 .table {
   --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #FFF;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #FFF;
@@ -2213,7 +2238,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #FFF;
-  background-color: none;
+  background-color: rgba(69, 97, 238, 0.12);
   background-clip: padding-box;
   border: 0 solid #ced4da;
   appearance: none;
@@ -2228,15 +2253,15 @@ progress {
 .form-control[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not(:read-only) {
+.form-control[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 .form-control:focus {
   color: #FFF;
-  background-color: none;
+  background-color: rgba(69, 97, 238, 0.12);
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: none;
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2245,7 +2270,7 @@ progress {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .form-control:read-only {
+.form-control:disabled, .form-control[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
@@ -2268,7 +2293,7 @@ progress {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
 .form-control::-webkit-file-upload-button {
@@ -2290,7 +2315,7 @@ progress {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -2359,7 +2384,7 @@ textarea.form-control-lg {
   height: auto;
   padding: 0.375rem;
 }
-.form-control-color:not(:disabled):not(:read-only) {
+.form-control-color:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 .form-control-color::-moz-color-swatch {
@@ -2379,7 +2404,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #FFF;
-  background-color: none;
+  background-color: rgba(69, 97, 238, 0.12);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2435,7 +2460,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: none;
+  background-color: rgba(69, 97, 238, 0.12);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2455,7 +2480,7 @@ textarea.form-control-lg {
 .form-check-input:focus {
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: none;
 }
 .form-check-input:checked {
   background-color: #0d6efd;
@@ -2532,10 +2557,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #0D1527, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #0D1527, none;
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #0D1527, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #0D1527, none;
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -2814,6 +2839,11 @@ textarea.form-control-lg {
 .was-validated .input-group .form-control:valid, .input-group .form-control.is-valid,
 .was-validated .input-group .form-select:valid,
 .input-group .form-select.is-valid {
+  z-index: 1;
+}
+.was-validated .input-group .form-control:valid:focus, .input-group .form-control.is-valid:focus,
+.was-validated .input-group .form-select:valid:focus,
+.input-group .form-select.is-valid:focus {
   z-index: 3;
 }
 
@@ -2898,6 +2928,11 @@ textarea.form-control-lg {
 .was-validated .input-group .form-control:invalid, .input-group .form-control.is-invalid,
 .was-validated .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
+  z-index: 2;
+}
+.was-validated .input-group .form-control:invalid:focus, .input-group .form-control.is-invalid:focus,
+.was-validated .input-group .form-select:invalid:focus,
+.input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
@@ -2928,7 +2963,7 @@ textarea.form-control-lg {
 }
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: none;
 }
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
   pointer-events: none;
@@ -3748,17 +3783,17 @@ textarea.form-control-lg {
 }
 
 .nav-tabs {
-  border-bottom: 2px solid #FC5421;
+  border-bottom: 1px solid #dee2e6;
 }
 .nav-tabs .nav-link {
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   background: none;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: none;
+  border-color: #e9ecef #e9ecef #dee2e6;
   isolation: isolate;
 }
 .nav-tabs .nav-link.disabled {
@@ -3768,12 +3803,12 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #FC5421;
+  color: #495057;
   background-color: #0D1527;
-  border-color: #FC5421;
+  border-color: #dee2e6 #dee2e6 #0D1527;
 }
 .nav-tabs .dropdown-menu {
-  margin-top: -2px;
+  margin-top: -1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4348,7 +4383,7 @@ textarea.form-control-lg {
   z-index: 3;
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: none;
 }
 
 .accordion-header {
@@ -4457,7 +4492,7 @@ textarea.form-control-lg {
   color: #0a58ca;
   background-color: #e9ecef;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: none;
 }
 
 .page-item:not(:first-child) .page-link {
@@ -4986,7 +5021,7 @@ textarea.form-control-lg {
 }
 .btn-close:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: none;
   opacity: 1;
 }
 .btn-close:disabled, .btn-close.disabled {
@@ -5047,14 +5082,6 @@ textarea.form-control-lg {
   word-wrap: break-word;
 }
 
-.modal-open {
-  overflow: hidden;
-}
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -5063,7 +5090,8 @@ textarea.form-control-lg {
   display: none;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   outline: 0;
 }
 
