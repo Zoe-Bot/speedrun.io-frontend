@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const LoginRegisterButtons = () => (
     <>
-        <button className="btn btn-primary ms-auto me-4"><Link className="text-white text-uppercase text-decoration-none" to="/login">Login</Link></button>
-        <a><Link className="text-primary text-decoration-none" id="register" to="/register">Register</Link></a>
+        <Link id="login" className="btn btn-primary text-white text-uppercase text-decoration-none ms-auto me-4 " to="/login">Login</Link>
+        <Link id="register" className="text-primary text-decoration-none" to="/register">Register</Link>
     </>
 )
 

@@ -6,12 +6,12 @@ import NavbarProfile from './NavbarProfile';
 import useToken from '../customHooks/useToken'
 
 const NavBar = () => {
-    const {token, setToken, isToken} = useToken()
+    const {token, setToken} = useToken()
     console.log(token)
 
     return (<nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div className="container mb-4">
-            <a className="navbar-brand" href="#"><img src={logo} className="img-fluid" width="200"></img></a>
+            <Link className="navbar-brand" to="/"><img src={logo} className="img-fluid" width="200"></img></Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
