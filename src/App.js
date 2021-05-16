@@ -45,6 +45,7 @@ const App = () => {
                     <Route path="/map/:id" component={MapOverview} />
                     <Route path="/register" component={Register} />
                     <Route path="/login" component={Login}/>
+                    <Route path="/error" component={Error} />
                     <Route path="/" component={Index} exact />
                     <Route component={Error} />
                 </Switch>
