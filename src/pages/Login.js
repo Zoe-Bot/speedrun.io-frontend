@@ -21,8 +21,6 @@ const Login = (props) => {
     const [password, setPassword] = useState()
     const {token, setToken} = useToken()
 
-
-
     const handleSubmit = async e => {
         e.preventDefault()
         const token = await loginUser({
@@ -35,6 +33,7 @@ const Login = (props) => {
         if(token.access_token != " ") {
             setToken(token)
             props.history.push('/');
+            location.reload();
         }
         else
             document.querySelector('#login-form small').style.display = 'block'

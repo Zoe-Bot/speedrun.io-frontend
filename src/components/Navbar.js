@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/img/logo.png';
 import LoginRegisterButtons from './LoginRegisterButtons';
 import NavbarProfile from './NavbarProfile';
+import useToken from '../customHooks/useToken'
 
-const NavBar = () => (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
+const NavBar = () => {
+    const {token, setToken, isToken} = useToken()
+    console.log(token)
+
+    return (<nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div className="container-fluid">
             <a className="navbar-brand" href="#"><img src={logo} className="img-fluid" width="200"></img></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,11 +22,15 @@ const NavBar = () => (
                 <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/maps">Maps</Link></li>
             </ul>
-            <LoginRegisterButtons />
-            <NavbarProfile />
+            {
+                token && <NavbarProfile />
+            }
+            {
+                !token && <LoginRegisterButtons />
+            }
         </div>
         </div>
-    </nav>
-)
+    </nav>)
+}
 
 export default NavBar
