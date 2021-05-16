@@ -4,7 +4,7 @@ form#login-form {
     row-gap: 0.5rem;
 }
 
-form#login-form > input{
+form#login-form > input {
     margin-bottom: 1rem;
 }
 
@@ -16,15 +16,15 @@ body {
 nav {
     #navbarNav.navbar-collapse {
         // Button
-        button.btn {
-            a {
-                font-size: 13px;
-                letter-spacing: 1.25px;
-            }
-            &:hover, &:focus, &:active {
-                color: #4561EE;
-                background-color: #4561EE;
-                border: 1px solid #4561EE;
+        a#login {
+            font-size: 13px;
+            letter-spacing: 1.25px;
+            &:hover,
+            &:focus,
+            &:active {
+                color: #4561ee;
+                background-color: #4561ee;
+                border: 1px solid #4561ee;
                 box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
                 transform: translate(0, -5px);
                 transition: transform 0.1s ease;
@@ -33,7 +33,36 @@ nav {
 
         // Link
         a#register:hover {
-            text-decoration: underline!important;
+            text-decoration: underline !important;
         }
+    }
+}
+
+// Button with gradient
+/*
+    Write outer: div class = gradient-button
+    Write inner: a class = skew fix (this is neccessary)
+*/
+.gradient-button {
+    display: inline-block;
+    transform: skew(-15deg);
+    padding: 0.75em 2.5em;
+    background: rgb(220, 89, 203);
+    background: linear-gradient(
+        71deg,
+        rgba(220, 89, 203, 1) 0%,
+        rgba(190, 122, 242, 1) 35%,
+        rgba(87, 235, 230, 1) 100%
+    );
+    border: none;
+    .skew-fix {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        transform: skew(15deg);
+        border: none;
     }
 }

@@ -14,20 +14,43 @@ body {
   letter-spacing: 1px;
 }
 
-nav #navbarNav.navbar-collapse button.btn a {
+nav #navbarNav.navbar-collapse a#login {
   font-size: 13px;
   letter-spacing: 1.25px;
 }
-nav #navbarNav.navbar-collapse button.btn:hover, nav #navbarNav.navbar-collapse button.btn:focus, nav #navbarNav.navbar-collapse button.btn:active {
-  color: #4561EE;
-  background-color: #4561EE;
-  border: 1px solid #4561EE;
+nav #navbarNav.navbar-collapse a#login:hover, nav #navbarNav.navbar-collapse a#login:focus, nav #navbarNav.navbar-collapse a#login:active {
+  color: #4561ee;
+  background-color: #4561ee;
+  border: 1px solid #4561ee;
   box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
   transform: translate(0, -5px);
   transition: transform 0.1s ease;
 }
 nav #navbarNav.navbar-collapse a#register:hover {
   text-decoration: underline !important;
+}
+
+/*
+    Write outer: div class = gradient-button
+    Write inner: a class = skew fix (this is neccessary)
+*/
+.gradient-button {
+  display: inline-block;
+  transform: skew(-15deg);
+  padding: 0.75em 2.5em;
+  background: #dc59cb;
+  background: linear-gradient(71deg, #dc59cb 0%, #be7af2 35%, #57ebe6 100%);
+  border: none;
+}
+.gradient-button .skew-fix {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  transform: skew(15deg);
+  border: none;
 }
 
 /*!
@@ -2880,7 +2903,7 @@ textarea.form-control-lg {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.375rem 3rem;
+  padding: 0.5rem 3rem;
   font-size: 1rem;
   border-radius: 0px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
