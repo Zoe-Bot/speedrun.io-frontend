@@ -52,7 +52,7 @@ const Login = (props) => {
                         </div>
                         <div id="form-grid-password" className="mb-3">
                             <label htmlFor="password" className="form-label fst-italic fw-bolder">Passwort</label>
-                            <Link className="text-muted text-end" to="/">Forgott password</Link>
+                            <Link className="text-muted text-end" to="/">Forgott password?</Link>
                             <input type="password" className="form-control" id="password" name="password" placeholder="Password..." onChange={e => setPassword(e.target.value)} required />
                         </div>
                         <small className="invalid-feedback pb-2" style={{ display: 'none' }}>Wrong username or password!</small>

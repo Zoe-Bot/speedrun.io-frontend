@@ -1,45 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import SubmitButton from '../components/SubmitButton'
 
-export default class Register extends React.Component {
-    constructor(props) {
-        super(props)
+const Register = () => {
+    const [email, setEmail] = useState()
+    const [username, setUsername] = useState()
+    const [password, setPassword] = useState()
 
-        this.state = {
-            username: "",
-            password: "",
-            email: ""
-        };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event) {
-        const target = event.target
-        const value = target.value
-        const name = target.name
-
-        this.setState({
-            [name]: value
-        })
-    }
-
-    async handleSubmit(event) {
-        event.preventDefault()
-        const username = event.target.querySelector('input[name=username]').value
-        const email = event.target.querySelector('input[name=email]').value
-        const password = event.target.querySelector('input[name=password]').value
-        
+    const handleSubmit = async e => {
+        e.preventDefault()
         const result = await fetch('http://localhost:3000/v1/users/create', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ 
+            body: JSON.stringify({
                 username,
                 email,
                 password
-             })
+            })
         })
         const data = await result.json()
 
@@ -47,20 +27,40 @@ export default class Register extends React.Component {
     }
 
 
-    render() {
-        return (
-            <form id="login-form" onSubmit={this.handleSubmit}>
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" placeholder="Enter username..." value={this.state.username} onChange={this.handleChange} required />
-                
-                <label htmlFor="email">E-Mail</label>
-                <input type="text" name="email" placeholder="Enter email..." value={this.state.email} onChange={this.handleChange} required />
+    return (
+        <div className="container d-flex flex-column min-vh-100 my-5 py-lg-5">
+            <div className="row login-form-container mx-auto mb-4">
+                <div className="col-12">
+                    <h1 className="fst-italic">Welcome back</h1>
+                    <h6 className="fst-italic">Enter your details to create your account</h6>
+                </div>
+            </div>
+            <div className="row login-form-container mx-auto">
+                <div className="col-12">
+                    <form id="login-form" onSubmit={handleSubmit}>
+                        <div className="mb-3">
+                            <label htmlFor="username" className="form-label fst-italic fw-bolder">Username</label>
+                            <input type="text" className="form-control" id="username" name="username" placeholder="Username" aria-describedby="username" onChange={e => setUsername(e.target.value)} required />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email" className="form-label fst-italic fw-bolder">E-Mail</label>
+                            <input type="email" className="form-control" name="email" id="email" placeholder="Email" aria-describedby="email" onChange={e => setEmail(e.target.value)} required />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="password" className="form-label fst-italic fw-bolder">Passwort</label>
+                            <input type="password" className="form-control" name="password" id="password" placeholder="Password" onChange={e => setPassword(e.target.value)} required />
+                        </div>
+                        <div className="mb-3 form-check">
+                            <input type="checkbox" className="form-check-input" id="terms-check" />
+                            <label className="form-check-label fst-italic" htmlFor="terms-check">I Agree the <Link to="/">Terms and Conditions</Link></label>
+                        </div>
+                        <SubmitButton text="Submit" />
+                    </form>
+                </div>
+                </div>
+            </div>
+    )
 
-                <label htmlFor="password">Passwort</label>
-                <input type="password" name="password" placeholder="Enter password..." value={this.state.password} onChange={this.handleChange} required />
-
-                <button type="submit">Submit</button>
-            </form>
-        )
-    }
 }
+
+export default Register

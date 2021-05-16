@@ -101,6 +101,8 @@ nav {
     }
 }
 
+
+// Login
 .login-form-container {
     width: 600px;
 }
@@ -112,3 +114,8 @@ nav {
     }
 }
 
+
+// Register
+input.form-check-input:checked {
+    background-color: #4561ee;
+}
