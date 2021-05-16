@@ -13,13 +13,8 @@ const useToken = () => {
         localStorage.setItem('token', JSON.stringify(userToken))
         setToken(userToken)
     }
-    
-    const isToken = () => {
-        return localStorage.getItem('token') != ''
-    }
 
     return {
-        isToken,
         setToken: saveToken,
         token
     }
