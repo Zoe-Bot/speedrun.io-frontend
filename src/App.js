@@ -24,19 +24,14 @@ import Error from './pages/Error'
 // Component
 import NavBar from './components/Navbar'
 import Footer from './components/Footer'
+import PrivateRoute from './components/PrivateRoute'
 
 //Custom Hook
 import useToken from './customHooks/useToken'
 
 const App = () => {
-    const {token, setToken} = useToken()
+    const {token, setToken, isToken} = useToken()
     console.log("token", token)
-
-    /*
-    if(!token)
-        return <Login setToken={setToken} />
-    */
-    
 
     return (
         <div>
@@ -45,11 +40,12 @@ const App = () => {
                 <Switch>
                     <Route path="/leaderboard" component={Leaderboard}/>
                     <Route path="/game" component={Game}/>
-                    <Route path="/profile" component={Profile}/>
+                    <PrivateRoute path="/profile" component={Profile}/>
                     <Route path="/maps" component={Maps} />
                     <Route path="/map/:id" component={MapOverview} />
                     <Route path="/register" component={Register} />
-                    <Route path="/login" component={Login} />
+                    <Route path="/login" component={Login}/>
+                    <Route path="/error" component={Error} />
                     <Route path="/" component={Index} exact />
                     <Route component={Error} />
                 </Switch>

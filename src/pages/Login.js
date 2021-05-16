@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { Redirect } from 'react-router'
+import useToken from '../customHooks/useToken'
+
 
 // TODO: Move to useEffects
 async function loginUser(credentials) {
@@ -13,9 +16,10 @@ async function loginUser(credentials) {
     return data
 }
 
-const Login = ({ setToken }) => {
+const Login = (props) => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
+    const {token, setToken} = useToken()
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -23,12 +27,18 @@ const Login = ({ setToken }) => {
             username,
             password
         })
+        
         // TODO: change to 200 when its changed in backend
-        if(token.statusCode != 500 && token.statusCode != 401)
+        console.log(<Redirect to="/game"/>)
+        if(token.access_token != " ") {
             setToken(token)
+            props.history.push('/');
+            location.reload();
+        }
         else
             document.querySelector('#login-form small').style.display = 'block'
     }
+
 
     return (
         <form id="login-form" onSubmit={handleSubmit}>

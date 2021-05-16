@@ -13,7 +13,7 @@ const useToken = () => {
         localStorage.setItem('token', JSON.stringify(userToken))
         setToken(userToken)
     }
-    
+
     return {
         setToken: saveToken,
         token
