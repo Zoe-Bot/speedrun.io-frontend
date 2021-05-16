@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/img/logo.png';
+import LoginRegisterButtons from './LoginRegisterButtons';
+import NavbarProfile from './NavbarProfile';
 
 const NavBar = () => (
     <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
@@ -16,8 +18,8 @@ const NavBar = () => (
                 <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/maps">Maps</Link></li>
             </ul>
-            <button className="btn btn-primary ms-auto me-4"><Link className="text-white text-uppercase text-decoration-none" to="/login">Login</Link></button>
-            <a><Link className="text-primary text-decoration-none" id="register" to="/register">Register</Link></a>
+            <LoginRegisterButtons />
+            <NavbarProfile />
         </div>
         </div>
     </nav>
