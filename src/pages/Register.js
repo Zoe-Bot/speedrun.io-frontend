@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import SubmitButton from '../components/SubmitButton'
 
 const Register = () => {
@@ -49,11 +50,15 @@ const Register = () => {
                             <label htmlFor="password" className="form-label fst-italic fw-bolder">Passwort</label>
                             <input type="password" className="form-control" name="password" id="password" placeholder="Password" onChange={e => setPassword(e.target.value)} required />
                         </div>
+                        <div className="mb-3 form-check">
+                            <input type="checkbox" className="form-check-input" id="terms-check" />
+                            <label className="form-check-label fst-italic" htmlFor="terms-check">I Agree the <Link to="/">Terms and Conditions</Link></label>
+                        </div>
                         <SubmitButton text="Submit" />
                     </form>
                 </div>
+                </div>
             </div>
-        </div>
     )
 
 }

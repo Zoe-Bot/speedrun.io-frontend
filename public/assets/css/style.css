@@ -87,6 +87,10 @@ nav #navbarNav.navbar-collapse a#register:hover {
     width: 100%;
   }
 }
+input.form-check-input:checked {
+  background-color: #4561ee;
+}
+
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
