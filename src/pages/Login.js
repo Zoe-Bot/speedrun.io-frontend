@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import useToken from '../customHooks/useToken'
+
 
 // TODO: Move to useEffects
 async function loginUser(credentials) {
@@ -13,9 +15,12 @@ async function loginUser(credentials) {
     return data
 }
 
-const Login = ({ setToken }) => {
+const Login = () => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
+    const {token, setToken} = useToken()
+
+
 
     const handleSubmit = async e => {
         e.preventDefault()
