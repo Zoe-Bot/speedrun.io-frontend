@@ -1,9 +1,21 @@
-import React from "react";
+import React from 'react';
+import logo from '../assets/img/logo.png'
+import { Link } from 'react-router-dom'
 
-const Index = ({ props }) => {
+const Index = () => {
     return (
-        <div className="container">
-            <h1>Home</h1>
+        <div className="container min-vh-100 pt-5">
+            <div className="row mt-5">
+                <div className="col text-center mt-0 mt-lg-5">
+                    <img src={logo} className="img-fluid"></img>
+                    <div>
+                        <Link to="/game" className="gradient-button">
+                            <span className="skew-fix">Play now</span>
+                        </Link>
+                    </div>
+                        
+                </div>
+            </div>
         </div>
     )
 }
