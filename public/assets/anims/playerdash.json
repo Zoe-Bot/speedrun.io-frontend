@@ -1,0 +1,52 @@
+{"frames": [
+
+{
+	"filename": "adventurer-attack1-00.png",
+	"frame": {"x":0,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+},
+{
+	"filename": "adventurer-attack1-01.png",
+	"frame": {"x":50,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+},
+{
+	"filename": "adventurer-attack1-02.png",
+	"frame": {"x":100,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+},
+{
+	"filename": "adventurer-attack1-03.png",
+	"frame": {"x":150,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+},
+{
+	"filename": "adventurer-attack1-04.png",
+	"frame": {"x":200,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "playerdash.png",
+	"format": "RGBA8888",
+	"size": {"w":250,"h":37},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:dbbbf218fc37b3dd56220054513d0bdb:481300f9ac16b03acb10398a6fec9d05:efc2becc0f3bd364822b47e087583360$"
+}
+}
