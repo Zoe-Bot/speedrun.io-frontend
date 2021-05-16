@@ -31,7 +31,7 @@ const Login = (props) => {
         if (token.access_token != " ") {
             setToken(token)
             props.history.push('/');
-            location.reload();
+            window.location.reload();
         }
         else
             document.querySelector('#login-form small').style.display = 'block'

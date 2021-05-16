@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const NavbarProfile = () => {
     const logout = () => {
         localStorage.clear();
-        location.reload();
+        window.location.reload();
     }
 
     return (<>

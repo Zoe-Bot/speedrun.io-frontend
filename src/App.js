@@ -1,6 +1,4 @@
 // React
-import React from 'react'
-import { render } from 'react-dom'
 import {
     BrowserRouter as Router,
     Route,
@@ -17,7 +15,7 @@ import Leaderboard from './pages/Leaderboard';
 import Maps from './pages/Maps'
 import MapOverview from './pages/MapOverview'
 import Login from './pages/Login'
-import Register from '/pages/Register'
+import Register from './pages/Register'
 import Profile from './pages/Profile';
 import Error from './pages/Error'
 
@@ -55,4 +53,4 @@ const App = () => {
     )
 }
 
-render(<App />, document.getElementById("root"))
+export default App
