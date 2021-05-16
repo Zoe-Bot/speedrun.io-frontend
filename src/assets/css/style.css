@@ -14,6 +14,16 @@ body {
   letter-spacing: 1px;
 }
 
+a {
+  color: #4561ee !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+a:hover {
+  color: #4561ee;
+  text-decoration: underline;
+}
+
 nav #navbarNav.navbar-collapse a#login {
   font-size: 13px;
   letter-spacing: 1.25px;
@@ -4088,13 +4098,13 @@ textarea.form-control-lg {
 }
 
 .navbar-dark .navbar-brand {
-  color: #5D78FF;
+  color: #5D78FF !important;
 }
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #5D78FF;
+  color: #5D78FF !important;
 }
 .navbar-dark .navbar-nav .nav-link {
-  color: #FFF;
+  color: #FFF !important;
 }
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: #4561EE;
@@ -4104,22 +4114,22 @@ textarea.form-control-lg {
 }
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #5D78FF;
+  color: #5D78FF !important;
 }
 .navbar-dark .navbar-toggler {
-  color: #FFF;
+  color: #FFF !important;
   border-color: rgba(255, 255, 255, 0.1);
 }
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFF !important' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-dark .navbar-text {
-  color: #FFF;
+  color: #FFF !important;
 }
 .navbar-dark .navbar-text a,
 .navbar-dark .navbar-text a:hover,
 .navbar-dark .navbar-text a:focus {
-  color: #5D78FF;
+  color: #5D78FF !important;
 }
 
 .card {
