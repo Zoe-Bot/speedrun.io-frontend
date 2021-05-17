@@ -4,12 +4,13 @@ import MapList from '../components/MapList'
 const Maps = () => {
 
     return (
-        <div className="container fst-italic">
+        <div className="container fst-italic mb-5">
             <div className="row mb-3">
                 <div className="col-12">
                     <h1>All Maps</h1>
                 </div>
             </div>
+            {/*
             <div className="row">
                 <div className="col-12 col-lg-9">
                     <div className="col-12 col-lg-8">
@@ -18,14 +19,11 @@ const Maps = () => {
                             <span className="input-group-text"><i className="fas fa-search"></i></span>
                         </form>
                     </div>
-                    <div className="col-12 col-lg-6">
-
-                    </div>
                 </div>
-                <div className="col-12 col-lg-3">
-                    <h4>Filter</h4>
-                </div>
-            </div>
+            
+                
+            </div> */}
+            <MapList />
         </div>
     )
 }
