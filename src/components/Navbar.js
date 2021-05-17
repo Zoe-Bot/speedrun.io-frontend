@@ -19,7 +19,7 @@ const NavBar = () => {
             <ul className="navbar-nav border-start border-light ps-3">
                 <li className="nav-item"><Link className="nav-link active" to="/">Home</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/game">Game</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>
+            {/*<li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>*/}
                 <li className="nav-item"><Link className="nav-link" to="/maps">Maps</Link></li>
             </ul>
             {
