@@ -15,7 +15,7 @@ a {
 
 // Input
 input.form-control::placeholder {
-    color: rgba(255, 255, 255, 0.44);
+    color: rgba(255, 255, 255, 0.20);
 }
 
 // Button
@@ -36,7 +36,7 @@ button.btn.btn-primary {
 
 // Global utility
 .bg-primary-transparent {
-    background-color: rgba(69, 97, 238, 0.2);
+    background-color: rgba(69, 97, 238, 0.12)!important;
 }
 
 // Nav
@@ -235,4 +235,10 @@ input.form-check-input:checked {
             justify-self: flex-end;
         }
     }
+}
+
+
+// Maps
+#search{
+    
 }
