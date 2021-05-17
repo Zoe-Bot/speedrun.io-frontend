@@ -91,6 +91,31 @@ input.form-check-input:checked {
   background-color: #4561ee;
 }
 
+#profile-info {
+  display: grid;
+  grid-template-columns: 142px 1fr;
+  column-gap: 20px;
+}
+#profile-info div#profile-avatar {
+  background: linear-gradient(71deg, #dc59cb 0%, #be7af2 35%, #57ebe6 100%);
+  width: 130px;
+  height: 130px;
+  margin: 0.25rem;
+}
+#profile-info #info {
+  width: 300px;
+}
+#profile-info #info div {
+  display: flex;
+}
+#profile-info h6, #profile-info .h6 {
+  width: 70px;
+  height: 30px;
+  font-size: 13px;
+  align-self: center;
+  margin-bottom: 0;
+}
+
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
