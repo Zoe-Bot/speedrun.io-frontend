@@ -16,7 +16,7 @@ const MapOverview = ({ match }) => {
     }, [id])
 
     return (
-        <div className="container">
+        <div className="container mb-5">
             { map &&
                 <>
                     <h1>{map.id} {map.name}</h1>
