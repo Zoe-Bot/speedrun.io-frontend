@@ -85,7 +85,57 @@ const Profile = (props) => {
                         </div>
                         <div className="col-12 col-lg-7 col-xl-8">
                             <h3 className="pb-2">Highscores</h3>
+                            {/* Highscore element start */}
                             <div id="highscores" className="col-12 bg-primary-transparent py-3">
+                                <div id="map" className="d-flex align-items-center">
+                                    <div id="highscores-image"></div>
+                                    <div className="ps-3">
+                                        <small className="text-muted">map</small>
+                                        <h6 className="mb-0">Super Mario</h6>
+                                    </div>
+                                </div>
+                                <div id="place" className="d-flex align-items-center justify-content-sm-center">
+                                    <h4 className="mb-0 pe-1">6.</h4>
+                                    <p className="mb-0">of 10.000</p>
+                                </div>
+                                <div id="time" className="text-center bg-primary py-3 me-3" style={{width: "120px", height: "50px", justifySelf: "flex-end"}}>
+                                    <h6>01:30:001</h6>
+                                </div>
+                            </div>
+                            {/* Highscore element end */}
+                            <div id="highscores" className="col-12 py-3">
+                                <div id="map" className="d-flex align-items-center">
+                                    <div id="highscores-image"></div>
+                                    <div className="ps-3">
+                                        <small className="text-muted">map</small>
+                                        <h6 className="mb-0">Super Mario</h6>
+                                    </div>
+                                </div>
+                                <div id="place" className="d-flex align-items-center justify-content-sm-center">
+                                    <h4 className="mb-0 pe-1">6.</h4>
+                                    <p className="mb-0">of 10.000</p>
+                                </div>
+                                <div id="time" className="text-center bg-primary py-3 me-3" style={{width: "120px", height: "50px", justifySelf: "flex-end"}}>
+                                    <h6>01:30:001</h6>
+                                </div>
+                            </div>
+                            <div id="highscores" className="col-12 bg-primary-transparent py-3">
+                                <div id="map" className="d-flex align-items-center">
+                                    <div id="highscores-image"></div>
+                                    <div className="ps-3">
+                                        <small className="text-muted">map</small>
+                                        <h6 className="mb-0">Super Mario</h6>
+                                    </div>
+                                </div>
+                                <div id="place" className="d-flex align-items-center justify-content-sm-center">
+                                    <h4 className="mb-0 pe-1">6.</h4>
+                                    <p className="mb-0">of 10.000</p>
+                                </div>
+                                <div id="time" className="text-center bg-primary py-3 me-3" style={{width: "120px", height: "50px", justifySelf: "flex-end"}}>
+                                    <h6>01:30:001</h6>
+                                </div>
+                            </div>
+                            <div id="highscores" className="col-12 py-3">
                                 <div id="map" className="d-flex align-items-center">
                                     <div id="highscores-image"></div>
                                     <div className="ps-3">
