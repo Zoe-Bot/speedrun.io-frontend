@@ -29,9 +29,9 @@ const Profile = (props) => {
 
     return (
         <>
-        <div className="container">
+        <div className="container mb-3 mb-lg-5">
             <div className="row">
-                <div id="profile-info" className="col-12 col-lg-4 fst-italic">
+                <div id="profile-info" className="col-12 col-sm-10 col-lg-6 col-xl-5 fst-italic">
                     <div className="border border-2 border-primary">
                         <div id="profile-avatar" style={{ backgroundImage: avatar }}></div>
                     </div>
@@ -48,8 +48,40 @@ const Profile = (props) => {
                 </div>
             </div>
         </div>
-        <div className="container-fluid">
-        
+        <div className="container-fluid border-top border-primary">
+            <div className="container pt-3 pt-lg-5">
+                <div className="row fst-italic">
+                    <div className="col-12 col-lg-4">
+            	        <h3 className="pb-2">Statistics</h3>
+                        <div id="statistics" className="row">
+                            <div className="text-center p-5" style={{backgroundColor: "rgba(69, 97, 238, 0.2)"}}>
+                                <i class="fas fa-medal fa-4x text-primary pb-3"></i>
+                                <h4 className="fs-2">2</h4>
+                                <h5>Hidden</h5>
+                            </div>
+                            <div className="text-center p-5" style={{backgroundColor: "rgba(69, 97, 238, 0.2)"}}>
+                                <i class="fas fa-medal fa-4x text-primary pb-3"></i>
+                                <h4 className="fs-2">2</h4>
+                                <h5>Hidden</h5>
+                            </div>
+                            <div className="text-center p-5" style={{backgroundColor: "rgba(69, 97, 238, 0.2)"}}>
+                                <i class="fas fa-medal fa-4x text-primary pb-3"></i>
+                                <h4 className="fs-2">2</h4>
+                                <h5>Hidden</h5>
+                            </div>
+                            <div className="text-center p-5" style={{backgroundColor: "rgba(69, 97, 238, 0.2)"}}>
+                                <i class="fas fa-medal fa-4x text-primary pb-3"></i>
+                                <h4 className="fs-2">2</h4>
+                                <h5>Hidden</h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className="col-7">
+
+                    </div>
+                </div>
+            </div>
         </div>
         </>
     )

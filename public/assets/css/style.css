@@ -102,9 +102,6 @@ input.form-check-input:checked {
   height: 130px;
   margin: 0.25rem;
 }
-#profile-info #info {
-  width: 300px;
-}
 #profile-info #info div {
   display: flex;
 }
@@ -116,6 +113,33 @@ input.form-check-input:checked {
   margin-bottom: 0;
 }
 
+@media (max-width: 500px) {
+  #profile-info {
+    display: grid;
+    grid-template-columns: 114px 1fr;
+  }
+  #profile-info div#profile-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0.25rem;
+  }
+}
+#statistics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  #statistics {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+}
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -7347,7 +7371,7 @@ textarea.form-control-lg {
 }
 
 .opacity-25 {
-  opacity: 0.25 !important;
+  opacity: 0.2 !important;
 }
 
 .opacity-50 {
@@ -8018,7 +8042,7 @@ textarea.form-control-lg {
   }
 
   .opacity-sm-25 {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
   }
 
   .opacity-sm-50 {
@@ -8689,7 +8713,7 @@ textarea.form-control-lg {
   }
 
   .opacity-md-25 {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
   }
 
   .opacity-md-50 {
@@ -9360,7 +9384,7 @@ textarea.form-control-lg {
   }
 
   .opacity-lg-25 {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
   }
 
   .opacity-lg-50 {
@@ -10031,7 +10055,7 @@ textarea.form-control-lg {
   }
 
   .opacity-xl-25 {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
   }
 
   .opacity-xl-50 {
@@ -10702,7 +10726,7 @@ textarea.form-control-lg {
   }
 
   .opacity-xxl-25 {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
   }
 
   .opacity-xxl-50 {

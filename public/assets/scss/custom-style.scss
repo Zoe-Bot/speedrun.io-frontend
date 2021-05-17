@@ -134,7 +134,7 @@ input.form-check-input:checked {
         margin: 0.25rem;
     }
     #info {
-        width: 300px;
+        
         div {
             display: flex;
         }
@@ -145,5 +145,34 @@ input.form-check-input:checked {
         font-size: 13px;
         align-self: center;
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    #profile-info {
+        display: grid;
+    grid-template-columns: 114px 1fr;
+        div#profile-avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0.25rem;
+        }
+    }
+}
+
+#statistics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+@media (max-width: 500px) {
+    #statistics {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
     }
 }
