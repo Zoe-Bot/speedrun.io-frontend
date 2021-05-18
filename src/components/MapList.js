@@ -7,9 +7,10 @@ const MapList = () => {
 
     useEffect(() => {
         const fetchMaps = async () => {
-            const result = await fetch('http://localhost:3000/v1/maps')
+            const result = await fetch('http://localhost:3000/v1/maps/frontend')
             const body = await result.json()
             setMaps(body)
+            console.log(mapsRef.current)
         }
         fetchMaps()
     }, [])
