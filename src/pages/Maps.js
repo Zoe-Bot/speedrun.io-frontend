@@ -2,6 +2,7 @@ import React from "react"
 import MapList from '../components/MapList'
 import avatar from '../assets/img/avatar.png'
 import { Link } from "react-router-dom"
+import Card from "../components/Card"
 
 const Maps = () => {
 
@@ -14,7 +15,7 @@ const Maps = () => {
             </div>
             <div className="row">
                 <div className="col-12 col-lg-9">
-                    <div className="row">
+                    <div className="row mb-3">
                         <div className="col-12 col-lg-8">
                             <form className="input-group bg-primary-transparent">
                                 <input type="search" className="form-control py-2 ps-4" id="search" aria-describedby="search" placeholder="Search mapname, tags..." />
@@ -34,31 +35,17 @@ const Maps = () => {
                         </div>
                     </div>
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
-                        <div className="col">
-                            <div className="card bg-primary-transparent">
-                                <div id="card-img"></div>
-                                <div className="card-body mx-3 mb-3">
-                                    <small className="text-muted">easy</small>
-                                    <h5 className="card-title">Super Mario</h5>
-                                    <div className="d-flex">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="far fa-star"></i>
-                                        <Link className="ms-auto" to='/'><i className="fas fa-play"></i></Link> 
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="col mb-3">
+                            <Card headline="Super Mario" subline="easy" />
                         </div>
-                        <div className="col">
-
+                        <div className="col mb-3">
+                            <Card headline="Super Mario" subline="easy" />
                         </div>
-                        <div className="col">
-
+                        <div className="col mb-3">
+                            <Card headline="Super Mario" subline="easy" />
                         </div>
-                        <div className="col">
-
+                        <div className="col mb-3">
+                            <Card headline="Super Mario" subline="easy" />
                         </div>
                     </div>
                 </div>
