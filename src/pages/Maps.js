@@ -1,5 +1,7 @@
 import React from "react"
 import MapList from '../components/MapList'
+import avatar from '../assets/img/avatar.png'
+import { Link } from "react-router-dom"
 
 const Maps = () => {
 
@@ -31,7 +33,34 @@ const Maps = () => {
                             </div>
                         </div>
                     </div>
-                    
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                        <div className="col">
+                            <div className="card bg-primary-transparent">
+                                <div id="card-img"></div>
+                                <div className="card-body mx-3 mb-3">
+                                    <small className="text-muted">easy</small>
+                                    <h5 className="card-title">Super Mario</h5>
+                                    <div className="d-flex">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                        <Link className="ms-auto" to='/'><i className="fas fa-play"></i></Link> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+
+                        </div>
+                        <div className="col">
+
+                        </div>
+                        <div className="col">
+
+                        </div>
+                    </div>
                 </div>
                 <div className="col-12 col-lg-3">
                     <h3>Filter</h3>
