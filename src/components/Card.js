@@ -5,8 +5,8 @@ const Card = ({headline, subline}) => (
     <div className="card bg-primary-transparent">
         <div id="card-img"></div>
         <div className="card-body mx-3 mb-3">
-            <small className="text-muted">{headline}</small>
-            <h5 className="card-title">{subline}</h5>
+            <small className="text-muted">{subline}</small>
+            <h5 className="card-title">{headline}</h5>
             <div className="d-flex">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>

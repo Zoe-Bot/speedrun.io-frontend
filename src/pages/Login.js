@@ -5,7 +5,7 @@ import useToken from '../customHooks/useToken'
 
 // TODO: Move to useEffects
 async function loginUser(credentials) {
-    let response = await fetch('http://localhost:3000/v1/auth/login', {
+    let response = await fetch('http://localhost:3000/v1/maps/frontend', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'

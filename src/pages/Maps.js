@@ -1,10 +1,18 @@
-import React from "react"
-import MapList from '../components/MapList'
-import avatar from '../assets/img/avatar.png'
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react"
 import Card from "../components/Card"
 
 const Maps = () => {
+    const [maps, setMaps, mapsRef] = useState()
+
+    useEffect(() => {
+        const fetchMaps = async () => {
+            const result = await fetch('http://localhost:3000/v1/maps/frontend')
+            const body = await result.json()
+            setMaps(body)
+            console.log(mapsRef.current)
+        }
+        fetchMaps()
+    }, [])
 
     return (
         <div className="container fst-italic mb-5">
@@ -36,7 +44,7 @@ const Maps = () => {
                     </div>
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
                         <div className="col mb-3">
-                            <Card headline="Super Mario" subline="easy" />
+                            <Card headline={maps} subline="easy" />
                         </div>
                         <div className="col mb-3">
                             <Card headline="Super Mario" subline="easy" />
@@ -49,8 +57,17 @@ const Maps = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-lg-3">
+                <div className="col-12 col-lg-3 bg-primary-transparent">
                     <h3>Filter</h3>
+                    <div className="form-check">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label className="form-check-label" htmlFor="flexCheckDefault">Featured</label>
+                    </div>
+                    <div className="form-check">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label className="form-check-label" htmlFor="flexCheckDefault">Featured</label>
+                    </div>
+                    <hr></hr>
                 </div>
             </div>
         </div>
