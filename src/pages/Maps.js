@@ -49,6 +49,27 @@ const Maps = () => {
                             </div>
                         })}
                     </div>
+                    <div className="row">
+                        <div className="col-12 d-flex justify-content-center">
+                            <nav aria-label="Page navigation">
+                                <ul className="pagination">
+                                    <li className="page-item">
+                                        <a className="page-link border-0 bg-transparent" href="#" aria-label="Previous">
+                                            <span aria-hidden="true"><i className="fas fa-chevron-left"></i></span>
+                                        </a>
+                                    </li>
+                                    <li className="page-item pe-3"><a className="page-link" href="#">1</a></li>
+                                    <li className="page-item pe-3"><a className="page-link" href="#">2</a></li>
+                                    <li className="page-item"><a className="page-link" href="#">3</a></li>
+                                    <li className="page-item">
+                                        <a className="page-link border-0 bg-transparent" href="#" aria-label="Next">
+                                            <span aria-hidden="true"><i className="fas fa-chevron-right"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-12 col-lg-3 px-md-4 py-4 px-lg-5 py-lg-5 bg-primary-transparent">
                     <h3 className="mb-3">Filter</h3>
