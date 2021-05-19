@@ -34,6 +34,13 @@ button.btn.btn-primary:hover, button.btn.btn-primary:focus, button.btn.btn-prima
   background-color: rgba(69, 97, 238, 0.12) !important;
 }
 
+.navbar-toggler {
+  border: 0;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 nav #navbarNav.navbar-collapse a#login {
   font-size: 13px;
   letter-spacing: 1.25px;
