@@ -42,9 +42,10 @@ const Maps = () => {
                         </div>
                     </div>
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+                        {console.log(maps)}
                         {maps && maps.map((map, key) => {
                             return <div key={key} className="col mb-3">
-                                <Card headline={map.name} subline={map.difficulty} />
+                                <Card headline={map.name} subline={map.difficulty} link={'map/'} />
                             </div>
                         })}
                     </div>
