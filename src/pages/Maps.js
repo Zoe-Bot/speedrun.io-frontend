@@ -9,7 +9,6 @@ const Maps = () => {
             const result = await fetch('http://localhost:3000/v1/maps/frontend')
             const body = await result.json()
             setMaps(body)
-            console.log(mapsRef.current)
         }
         fetchMaps()
     }, [])
@@ -42,19 +41,13 @@ const Maps = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
-                        <div className="col mb-3">
-                            <Card headline={maps} subline="easy" />
-                        </div>
-                        <div className="col mb-3">
-                            <Card headline="Super Mario" subline="easy" />
-                        </div>
-                        <div className="col mb-3">
-                            <Card headline="Super Mario" subline="easy" />
-                        </div>
-                        <div className="col mb-3">
-                            <Card headline="Super Mario" subline="easy" />
-                        </div>
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+                        {console.log(maps)}
+                        {maps && maps.map((map, key) => {
+                            return <div key={key} className="col mb-3">
+                                <Card headline={map.name} subline={map.difficulty} link={'map/'} />
+                            </div>
+                        })}
                     </div>
                 </div>
                 <div className="col-12 col-lg-3 bg-primary-transparent">
