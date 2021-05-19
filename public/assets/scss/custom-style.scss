@@ -40,6 +40,14 @@ button.btn.btn-primary {
 }
 
 // Nav
+.navbar-toggler {
+    border: 0;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
 nav {
     #navbarNav.navbar-collapse {
         // Button
