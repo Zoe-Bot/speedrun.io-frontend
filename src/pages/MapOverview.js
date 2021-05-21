@@ -76,6 +76,32 @@ const MapOverview = ({ match }) => {
                         </div>
                     </div>
                 </div>
+                <div className="col-12 col-lg-7">
+                    <div className="col-12">
+                        <h4>Highscores</h4>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item border border-primary me-3" role="presentation">
+                                <button class="nav-link text-primary px-4 active" id="pills-daily-tab" data-bs-toggle="pill" data-bs-target="#pills-daily" type="button" role="tab" aria-controls="pills-daily" aria-selected="true">Daily</button>
+                            </li>
+                            <li class="nav-item border border-primary me-3" role="presentation">
+                                <button class="nav-link text-primary px-4" id="pills-weekly-tab" data-bs-toggle="pill" data-bs-target="#pills-weekly" type="button" role="tab" aria-controls="pills-weekly" aria-selected="false">Weekly</button>
+                            </li>
+                            <li class="nav-item border border-primary me-3" role="presentation">
+                                <button class="nav-link text-primary px-4" id="pills-monthly-tab" data-bs-toggle="pill" data-bs-target="#pills-monthly" type="button" role="tab" aria-controls="pills-monthly" aria-selected="false">Monthly</button>
+                            </li>
+                            <li class="nav-item border border-primary me-3" role="presentation">
+                                <button class="nav-link text-primary px-4" id="pills-forever-tab" data-bs-toggle="pill" data-bs-target="#pills-forever" type="button" role="tab" aria-controls="pills-forever" aria-selected="false">Forever</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
+                            </div>
+                            <div class="tab-pane fade" id="pills-weekly" role="tabpanel" aria-labelledby="pills-weekly-tab">...</div>
+                            <div class="tab-pane fade" id="pills-monthly" role="tabpanel" aria-labelledby="pills-monthly-tab">...</div>
+                            <div class="tab-pane fade" id="pills-forever" role="tabpanel" aria-labelledby="pills-forever-tab">...</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
