@@ -40,6 +40,7 @@ const App = () => {
                     <Route path="/game" component={Game}/>
                     <PrivateRoute path="/profile" component={Profile}/>
                     <Route path="/maps" component={Maps} />
+                    <Route path="/map" component={MapOverview} />
                     <Route path="/map/:id" component={MapOverview} />
                     <Route path="/register" component={Register} />
                     <Route path="/login" component={Login}/>
