@@ -16,7 +16,7 @@ const NavBar = () => {
                  <i className="fas fa-bars"></i>
             </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ps-3">
+            <ul className="navbar-nav ps-lg-3">
                 <li className="nav-item"><Link className="nav-link active" to="/">Home</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/game">Game</Link></li>
             {/*<li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>*/}
