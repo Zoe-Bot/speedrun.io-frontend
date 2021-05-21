@@ -34,10 +34,10 @@ button.btn.btn-primary:hover, button.btn.btn-primary:focus, button.btn.btn-prima
   background-color: rgba(69, 97, 238, 0.12) !important;
 }
 
-.navbar-toggler {
+.navbar-dark .navbar-toggler {
   border: 0;
 }
-.navbar-toggler:focus {
+.navbar-dark .navbar-toggler:focus {
   box-shadow: none;
 }
 
