@@ -202,6 +202,34 @@ input.form-check-input:checked {
   height: 180px;
 }
 
+#highscores-overview {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr 1fr 3fr;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  #highscores-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #highscores-overview #map {
+    grid-column: 1/3;
+    padding-bottom: 1rem;
+  }
+  #highscores-overview #place {
+    grid-row: 2/3;
+    padding-left: 1rem;
+    grid-column: 1/2;
+  }
+  #highscores-overview #time {
+    width: 120px;
+    height: 50px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-self: flex-end;
+  }
+}
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
