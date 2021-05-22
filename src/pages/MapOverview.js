@@ -7,7 +7,7 @@ const MapOverview = ({ match }) => {
 
     useEffect(() => {
         const fetchMap = async () => {
-            const result = await fetch(`http://localhost:3000/v1/maps/frontend/${id}`)
+            const result = await fetch(`http://localhost:3001/v1/maps/frontend/${id}`)
             const body = await result.json()
             setMap(body[0])
             console.log("map", mapRef.current)
