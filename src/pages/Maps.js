@@ -45,7 +45,7 @@ const Maps = () => {
                         {console.log(maps)}
                         {maps && maps.map((map, key) => {
                             return <div key={key} className="col mb-3">
-                                <Card headline={map.name} subline={map.difficulty} link={'map/'} />
+                                <Card headline={map.name} subline={map.difficulty} link={`/maps/${map.slug}`} />
                             </div>
                         })}
                     </div>
