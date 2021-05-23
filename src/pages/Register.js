@@ -53,8 +53,8 @@ const Register = () => {
                             <input type="password" className="form-control" name="password" id="password" placeholder="Password" onChange={e => setPassword(e.target.value)} required />
                         </div>
                         <div className="mb-3 form-check">
-                            <input type="checkbox" className="form-check-input" id="terms-check" />
-                            <label className="form-check-label fst-italic" htmlFor="terms-check">I Agree the <Link to="/">Terms and Conditions</Link></label>
+                            <input type="checkbox" className="form-check-input" id="terms-check" required/>
+                            <label className="form-check-label fst-italic" htmlFor="terms-check">I Agree the <Link className="link-primary" to="/">Terms and Conditions</Link></label>
                         </div>
                         <SubmitButton text="Submit" />
                     </form>

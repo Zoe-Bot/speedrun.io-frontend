@@ -42,7 +42,7 @@ const Login = (props) => {
             <div className="row login-form-container mx-auto mb-4">
                 <div className="col-12">
                     <h1 className="fst-italic">Welcome back</h1>
-                    <h6 className="fst-italic">New here? <Link to="/register">Register</Link></h6>
+                    <h6 className="fst-italic">New here? <Link className="link-primary" to="/register">Register</Link></h6>
                 </div>
             </div>
             <div className="row login-form-container mx-auto">
@@ -54,7 +54,7 @@ const Login = (props) => {
                         </div>
                         <div id="form-grid-password" className="mb-3">
                             <label htmlFor="password" className="form-label fst-italic fw-bolder">Passwort</label>
-                            <Link className="text-muted text-end" to="/">Forgott password?</Link>
+                            <Link className="link-light text-end" to="/">Forgott password?</Link>
                             <input type="password" className="form-control" id="password" name="password" placeholder="Password..." onChange={e => setPassword(e.target.value)} required />
                         </div>
                         <small className="invalid-feedback pb-2" style={{ display: 'none' }}>Wrong username or password!</small>
