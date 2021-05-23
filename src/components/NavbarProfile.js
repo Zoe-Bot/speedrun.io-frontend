@@ -8,8 +8,8 @@ const NavbarProfile = () => {
     }
 
     return (<>
-        <li className="ms-auto list-unstyled pe-3"><Link to="/profile">Profile</Link></li>
-        <button id="logout" onClick={logout} className="list-unstyled"><Link to="/">Logout</Link></button>
+        <li className="ms-auto list-unstyled pe-3"><Link className="link-primary" to="/profile">Profile</Link></li>
+        <li className="list-unstyled pe-3"><Link id="logout" className="link-primary" to="/" onClick={logout}>Logout</Link></li>
     </>)
 }
     
