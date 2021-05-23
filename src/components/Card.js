@@ -13,7 +13,7 @@ const Card = ({headline, subline, link}) => (
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="far fa-star"></i>
-                <Link className="ms-auto stretched-link" to={link}><i className="fas fa-play"></i></Link>
+                <Link className="ms-auto stretched-link link-primary" to={link}><i className="fas fa-play"></i></Link>
             </div>
         </div>
     </div>

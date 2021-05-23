@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/img/logo.png';
 import LoginRegisterButtons from './LoginRegisterButtons';
 import NavbarProfile from './NavbarProfile';
@@ -17,10 +17,10 @@ const NavBar = () => {
             </button>
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ps-lg-3">
-                <li className="nav-item"><Link className="nav-link active" to="/">Home</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/game">Game</Link></li>
+                <li className="nav-item"><NavLink className="nav-link" to="/" exact={true} activeClassName="active">Home</NavLink></li>
+                <li className="nav-item"><NavLink className="nav-link" to="/game" activeClassName="active">Game</NavLink></li>
             {/*<li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>*/}
-                <li className="nav-item"><Link className="nav-link" to="/maps">Maps</Link></li>
+                <li className="nav-item"><NavLink className="nav-link" to="/maps" activeClassName="active">Maps</NavLink></li>
             </ul>
             {
                 token && <NavbarProfile />
