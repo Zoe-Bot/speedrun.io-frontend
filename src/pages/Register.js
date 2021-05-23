@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SubmitButton from '../components/SubmitButton'
+import { useTitle } from '../customHooks/useTitle'
 
 const Register = () => {
+    useTitle("Register")
     const [email, setEmail] = useState()
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()

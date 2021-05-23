@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from '../assets/img/logo.png'
 import { Link } from 'react-router-dom'
+import { useTitle } from '../customHooks/useTitle';
 
 const Index = () => {
+    useTitle("speedrun.io")
+
     return (
         <div className="container min-vh-100 pt-5">
             <div className="row mt-5">

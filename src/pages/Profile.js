@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
+import useState from 'react-usestateref'
 import avatar from '../assets/img/avatar.png'
+import { useTitle } from "../customHooks/useTitle"
 import useToken from '../customHooks/useToken'
 
 const Profile = (props) => {
-    const [username, setUsername] = useState()
+    const [username, setUsername, usernameRef] = useState()
     const { token, setToken } = useToken()
 
     useEffect(() => {
@@ -26,6 +28,8 @@ const Profile = (props) => {
         }
         fetchUser()
     }, [token])
+
+    useTitle(usernameRef.current ?? "Loading...")
 
     return (
         <>

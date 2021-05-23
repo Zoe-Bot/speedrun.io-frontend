@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SubmitButton from '../components/SubmitButton'
+import { useTitle } from '../customHooks/useTitle'
 import useToken from '../customHooks/useToken'
 
 // TODO: Move to useEffects
@@ -17,6 +18,7 @@ async function loginUser(credentials) {
 }
 
 const Login = (props) => {
+    useTitle("Login")
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
     const { token, setToken } = useToken()
