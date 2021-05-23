@@ -13,10 +13,10 @@ const NavBar = () => {
         <div className="container mb-4">
             <Link className="navbar-brand" to="/"><img src={logo} className="img-fluid" width="200"></img></Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                 <i className="fas fa-bars"></i>
             </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav border-start border-light ps-3">
+            <ul className="navbar-nav ps-lg-3">
                 <li className="nav-item"><Link className="nav-link active" to="/">Home</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/game">Game</Link></li>
             {/*<li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>*/}

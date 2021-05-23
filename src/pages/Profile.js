@@ -8,7 +8,7 @@ const Profile = (props) => {
 
     useEffect(() => {
         const fetchUser = async () => {
-            const result = await fetch(`http://localhost:3000/v1/auth/profile`, {
+            const result = await fetch(`http://localhost:3001/v1/auth/profile`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer ' + token.access_token

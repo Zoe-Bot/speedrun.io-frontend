@@ -5,7 +5,7 @@ body {
 }
 
 a {
-  color: #4561ee !important;
+  color: #4561ee;
   text-decoration: none !important;
 }
 a:hover {
@@ -32,6 +32,13 @@ button.btn.btn-primary:hover, button.btn.btn-primary:focus, button.btn.btn-prima
 
 .bg-primary-transparent {
   background-color: rgba(69, 97, 238, 0.12) !important;
+}
+
+.navbar-dark .navbar-toggler {
+  border: 0;
+}
+.navbar-dark .navbar-toggler:focus {
+  box-shadow: none;
 }
 
 nav #navbarNav.navbar-collapse a#login {
@@ -182,6 +189,40 @@ input.form-check-input:checked {
     grid-column: 1/2;
   }
   #highscores #time {
+    width: 120px;
+    height: 50px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-self: flex-end;
+  }
+}
+#card-img {
+  background: #4561ee;
+  width: 100%;
+  height: 180px;
+}
+
+#highscores-overview {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr 1fr 3fr;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  #highscores-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #highscores-overview #map {
+    grid-column: 1/3;
+    padding-bottom: 1rem;
+  }
+  #highscores-overview #place {
+    grid-row: 2/3;
+    padding-left: 1rem;
+    grid-column: 1/2;
+  }
+  #highscores-overview #time {
     width: 120px;
     height: 50px;
     grid-row: 2/3;
@@ -3918,12 +3959,12 @@ textarea.form-control-lg {
 .nav-pills .nav-link {
   background: none;
   border: 0;
-  border-radius: 0;
+  border-radius: 0px;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #0d6efd;
+  color: #FFF !important;
+  background-color: #4561EE;
 }
 
 .nav-fill > .nav-link,
@@ -4572,10 +4613,10 @@ textarea.form-control-lg {
 .page-link {
   position: relative;
   display: block;
-  color: #0d6efd;
+  color: #FFF;
   text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
+  background-color: transparent;
+  border: 1px solid #4561EE;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4585,14 +4626,14 @@ textarea.form-control-lg {
 }
 .page-link:hover {
   z-index: 2;
-  color: #0a58ca;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
+  color: #FFFFFF !important;
+  background-color: #4561EE;
+  border-color: #4561EE;
 }
 .page-link:focus {
   z-index: 3;
-  color: #0a58ca;
-  background-color: #e9ecef;
+  color: #FFF !important;
+  background-color: #4561EE;
   outline: 0;
   box-shadow: none;
 }
@@ -4602,9 +4643,9 @@ textarea.form-control-lg {
 }
 .page-item.active .page-link {
   z-index: 3;
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  color: #FFFFFF;
+  background-color: #4561EE;
+  border-color: #4561EE;
 }
 .page-item.disabled .page-link {
   color: #6c757d;
