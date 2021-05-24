@@ -19,7 +19,7 @@ const NavBar = () => {
             <ul className="navbar-nav ps-lg-3">
                 <li className="nav-item"><NavLink className="nav-link" to="/" exact={true} activeClassName="active">Home</NavLink></li>
                 <li className="nav-item"><NavLink className="nav-link" to="/game" activeClassName="active">Game</NavLink></li>
-            {/*<li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>*/}
+                <li className="nav-item"><NavLink className="nav-link" to="/leaderboard" activeClassName="active">Leaderboard</NavLink></li>
                 <li className="nav-item"><NavLink className="nav-link" to="/maps" activeClassName="active">Maps</NavLink></li>
             </ul>
             {
