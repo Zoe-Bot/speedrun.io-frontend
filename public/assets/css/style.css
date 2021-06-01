@@ -6,6 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #4561ee !important;
+}
+
 a {
   color: #4561ee;
   text-decoration: none !important;
@@ -109,7 +113,6 @@ input.form-check-input:checked {
   height: 50px;
   border-radius: 100%;
   background-size: contain;
-  margin-right: 1rem;
 }
 
 #profile-info {
@@ -3548,7 +3551,7 @@ textarea.form-control-lg {
   color: #FFF;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #1B274F;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0;

@@ -5,6 +5,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #4561ee!important;
+}
+
 // Links
 a {
     color: #4561ee;
@@ -138,7 +142,6 @@ input.form-check-input:checked {
     height: 50px;
     border-radius: 100%;
     background-size: contain;
-    margin-right: 1rem;
 }
 
 #profile-info {
