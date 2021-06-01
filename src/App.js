@@ -13,7 +13,7 @@ import Index from './pages/Index'
 import Game from './pages/Game';
 import Leaderboard from './pages/Leaderboard';
 import Maps from './pages/Maps'
-import MapOverview from './pages/MapOverview'
+import SingleMap from './pages/SingleMap'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Profile from './pages/Profile';
@@ -39,7 +39,7 @@ const App = () => {
                     <Route path="/leaderboard" component={Leaderboard}/>
                     <Route path="/game" component={Game}/>
                     <PrivateRoute path="/profile" component={Profile}/>
-                    <Route path="/maps/:slug" component={MapOverview} />
+                    <Route path="/maps/:slug" component={SingleMap} />
                     <Route path="/maps" component={Maps} />
                     <Route path="/register" component={Register} />
                     <Route path="/login" component={Login}/>

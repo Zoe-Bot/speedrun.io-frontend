@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import useState from 'react-usestateref'
-import background from '../assets/img/example.jpg'
 import { useTitle } from "../customHooks/useTitle"
 
 const MapOverview = ({ match }) => {
@@ -46,17 +45,16 @@ const MapOverview = ({ match }) => {
                                     <i className="fas fa-medal text-primary fs-5 pe-2"></i><p>01:32:00</p>
                                 </div>
                                 <div className="d-flex pe-3">
-                                    <i className="fas fa-medal fs-5 pe-2"></i><p>01:32:00</p>
+                                    <i className="fas fa-medal text-gold fs-5 pe-2"></i><p>01:32:00</p>
                                 </div>
                                 <div className="d-flex pe-3">
-                                    <i className="fas fa-medal text-light fs-5 pe-2"></i><p>01:32:00</p>
+                                    <i className="fas fa-medal text-silver fs-5 pe-2"></i><p>01:32:00</p>
                                 </div>
                                 <div className="d-flex pe-3">
-                                    <i className="fas fa-medal text-light fs-5 pe-2"></i><p>01:32:00</p>
+                                    <i className="fas fa-medal text-bronze fs-5 pe-2"></i><p>01:32:00</p>
                                 </div>
                             </div>
                             <div className="col-12 mb-2">
-                                {/* TODO: image tauschen zu background image */}
                                 <div id="single-map-img" style={{backgroundImage: `url(${map.thumbnail})`}} className="mb-3"></div>
                                 <Link className="btn btn-primary w-100 text-decoration-none" to="/game">Play map<i className="fas fa-play ps-2"></i></Link>
                             </div>

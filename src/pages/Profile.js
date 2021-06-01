@@ -64,17 +64,17 @@ const Profile = (props) => {
                                     <h5>Hidden</h5>
                                 </div>
                                 <div className="text-center bg-primary-transparent p-3 p-sm-5">
-                                    <i className="fas fa-medal fa-4x text-primary pb-3"></i>
+                                    <i className="fas fa-medal fa-4x text-gold pb-3"></i>
                                     <h4 className="fs-2">17</h4>
                                     <h5>Gold</h5>
                                 </div>
                                 <div className="text-center bg-primary-transparent p-3 p-sm-5">
-                                    <i className="fas fa-medal fa-4x text-primary pb-3"></i>
+                                    <i className="fas fa-medal fa-4x text-silver pb-3"></i>
                                     <h4 className="fs-2">17</h4>
                                     <h5>Silver</h5>
                                 </div>
                                 <div className="text-center bg-primary-transparent p-3 p-sm-5">
-                                    <i className="fas fa-medal fa-4x text-primary pb-3"></i>
+                                    <i className="fas fa-medal fa-4x text-bronze pb-3"></i>
                                     <h4 className="fs-2">50</h4>
                                     <h5>Bronze</h5>
                                 </div>

@@ -25,7 +25,7 @@ const Footer = () => (
             <div className="col">
             <h5 className="fst-italic">Pages</h5>
                 <ul className="list-unstyled">
-                    {/*<li><Link to="/leaderboard">Leaderboard</Link></li>*/}
+                    <li><Link to="/leaderboard">Leaderboard</Link></li>
                     <li><Link className="link-primary" to="/maps">Maps</Link></li>
                 </ul>
             </div>

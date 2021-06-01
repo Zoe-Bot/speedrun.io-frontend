@@ -40,6 +40,18 @@ button.btn.btn-primary:hover, button.btn.btn-primary:focus, button.btn.btn-prima
   background-color: rgba(69, 97, 238, 0.12) !important;
 }
 
+.text-gold {
+  color: #CFC53B;
+}
+
+.text-silver {
+  color: #9F9F9F;
+}
+
+.text-bronze {
+  color: #854A1D;
+}
+
 .navbar-dark .navbar-toggler {
   border: 0;
 }
