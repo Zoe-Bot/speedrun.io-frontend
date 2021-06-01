@@ -104,6 +104,14 @@ input.form-check-input:checked {
   background-color: #4561ee;
 }
 
+#navbar-profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-size: contain;
+  margin-right: 1rem;
+}
+
 #profile-info {
   display: grid;
   grid-template-columns: 142px 1fr;
@@ -202,6 +210,8 @@ input.form-check-input:checked {
   background: #4561ee;
   width: 100%;
   height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #highscores-overview {

@@ -36,6 +36,7 @@ const NavbarProfile = () => {
     return (<>
         <div className="dropdown ms-auto">
             <div className="d-flex align-items-center position-relative">
+                <div id="navbar-profile-img" style={{backgroundImage: `url('http://picsum.photos/480/320')`}}></div>
                 <div>
                     <h6 className="text-info border-bottom border-light pb-2 pe-4">{username}</h6>
                     <small>lvl 10</small>
