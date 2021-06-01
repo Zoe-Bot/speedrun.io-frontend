@@ -57,13 +57,13 @@ const MapOverview = ({ match }) => {
                             </div>
                             <div className="col-12 mb-2">
                                 {/* TODO: image tauschen zu background image */}
-                                <img src={background} className="img-fluid mb-3"></img>
+                                <div id="single-map-img" style={{backgroundImage: `url(${map.thumbnail})`}} className="mb-3"></div>
                                 <Link className="btn btn-primary w-100 text-decoration-none" to="/game">Play map<i className="fas fa-play ps-2"></i></Link>
                             </div>
                             <div className="col-12">
                                 <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
                                     <h6>Difficulty</h6>
-                                    <p className="mb-0">Easy</p>
+                                    <p className="mb-0">{map.difficulty}</p>
                                 </div>
                                 <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
                                     <h6>Rating</h6>
@@ -72,18 +72,18 @@ const MapOverview = ({ match }) => {
                                 <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
                                     <h6>Tags</h6>
                                     <div className="d-flex text-primary">
-                                        {/* TODO: Link to mapsoverview with filter selected */}
-                                        <p className="mb-0 pe-2">Jump</p>
-                                        <p className="mb-0">Run</p>
+                                        {map.tags.map(tag => {
+                                            return <p className="mb-0 ps-2">{tag}</p>
+                                        })}
                                     </div>
                                 </div>
                                 <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
                                     <h6>Time uploaded</h6>
-                                    <p className="mb-0">5 months ago</p>
+                                    <p className="mb-0">{map.createdAt}</p>
                                 </div>
                                 <div className="d-flex justify-content-between mt-3 pb-2">
                                     <h6>Last time updated</h6>
-                                    <p className="mb-0">2 weeks ago</p>
+                                    <p className="mb-0">{map.updatedAt}</p>
                                 </div>
                             </div>
                         </div>

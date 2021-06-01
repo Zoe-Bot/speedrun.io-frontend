@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Card = ({headline, subline, link}) => (
+const Card = ({headline, subline, link, thumbnail}) => (
     <div className="card bg-primary-transparent">
-        <div id="card-img"></div>
+        <div id="card-img" style={{backgroundImage: `url(${thumbnail})`}}></div>
         <div className="card-body mx-3 mb-3">
             <small className="text-muted">{subline}</small>
             <h5 className="card-title">{headline}</h5>

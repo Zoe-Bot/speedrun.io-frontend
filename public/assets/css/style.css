@@ -210,6 +210,13 @@ input.form-check-input:checked {
   align-items: center;
 }
 
+#single-map-img {
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (max-width: 500px) {
   #highscores-overview {
     display: grid;
