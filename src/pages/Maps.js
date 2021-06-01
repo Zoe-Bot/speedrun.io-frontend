@@ -73,44 +73,47 @@ const Maps = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-lg-3 px-md-4 py-4 px-lg-5 py-lg-5 bg-primary-transparent">
-                    <h3 className="mb-3">Filter</h3>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="featured" />
-                        <label className="form-check-label" htmlFor="featured">Featured</label>
+                <div className="col-12 col-lg-3">
+                    <div className="px-4 py-4 px-lg-5 py-lg-5 bg-primary-transparent">
+                        <h3 className="mb-3">Filter</h3>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="featured" />
+                            <label className="form-check-label" htmlFor="featured">Featured</label>
+                        </div>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="latest" />
+                            <label className="form-check-label" htmlFor="latest">Latest</label>
+                        </div>
+                        <hr></hr>
+                        <h5>Difficulty</h5>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="beginner" />
+                            <label className="form-check-label" htmlFor="beginner">Beginner</label>
+                        </div>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="intermediate" />
+                            <label className="form-check-label" htmlFor="intermediate">Intermediate</label>
+                        </div>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="expert" />
+                            <label className="form-check-label" htmlFor="expert">Expert</label>
+                        </div>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="impossible" />
+                            <label className="form-check-label" htmlFor="impossible">Impossible</label>
+                        </div>
+                        <hr></hr>
+                        <h5>Most popular Tags</h5>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="jump" />
+                            <label className="form-check-label" htmlFor="jump">Jump</label>
+                        </div>
+                        <div className="form-check mb-2">
+                            <input className="form-check-input" type="checkbox" value="" id="run" />
+                            <label className="form-check-label" htmlFor="run">Run</label>
+                        </div>
                     </div>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="latest" />
-                        <label className="form-check-label" htmlFor="latest">Latest</label>
-                    </div>
-                    <hr></hr>
-                    <h5>Difficulty</h5>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="beginner" />
-                        <label className="form-check-label" htmlFor="beginner">Beginner</label>
-                    </div>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="intermediate" />
-                        <label className="form-check-label" htmlFor="intermediate">Intermediate</label>
-                    </div>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="expert" />
-                        <label className="form-check-label" htmlFor="expert">Expert</label>
-                    </div>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="impossible" />
-                        <label className="form-check-label" htmlFor="impossible">Impossible</label>
-                    </div>
-                    <hr></hr>
-                    <h5>Most popular Tags</h5>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="jump" />
-                        <label className="form-check-label" htmlFor="jump">Jump</label>
-                    </div>
-                    <div className="form-check mb-2">
-                        <input className="form-check-input" type="checkbox" value="" id="run" />
-                        <label className="form-check-label" htmlFor="run">Run</label>
-                    </div>
+
                 </div>
             </div>
         </div>
