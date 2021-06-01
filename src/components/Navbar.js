@@ -10,7 +10,7 @@ const NavBar = () => {
     console.log(token)
 
     return (<nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <div className="container mb-4">
+        <div className="container mt-3 mb-4">
             <Link className="navbar-brand" to="/"><img src={logo} className="img-fluid" width="200"></img></Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                  <i className="fas fa-bars"></i>
