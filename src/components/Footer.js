@@ -38,6 +38,11 @@ const Footer = () => (
                 </ul>
             </div>
         </div>
+        <div className="row border-top border-primary mt-3 pt-4">
+            <div className="col-12 d-flex justify-content-start justify-content-md-center text-primary">
+                <p>Designed with<i className="fas fa-heart px-1"></i>and<i className="fas fa-coffee px-1"></i>by mijo-design</p>
+            </div>
+        </div>
     </div>
     </>
 )
