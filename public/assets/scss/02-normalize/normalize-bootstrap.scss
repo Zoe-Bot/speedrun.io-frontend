@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap");
+
+// Colors
+$theme-colors: (
+        "primary": #4561EE, //dark violett
+        "secondary": #DC59CB, //dark pink
+        "info": #5D78FF, // light violett
+        "dark": #0D1527, //dark blue
+        "success": #57EBE6, // cyan
+        "light": rgba(255, 255, 255, 0.4)
+);
+
+// Body
+$body-bg: #0D1527; //background dark blue
+$body-color: #FFF; //body font white
+
+// Font
+$font-family-sans-serif: 'Poppins', sans-serif; //font text
+$headings-font-family: 'Poppins', sans-serif; //font headings
+$headings-font-weight: 600; //semibold headings
+$font-weight-bolder: 600; //font semibold
+
+// Border
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+// Navbar
+$navbar-dark-color: #FFF!important;
+$navbar-dark-hover-color: #4561EE;
+$navbar-dark-active-color: #5D78FF!important;
+
+$navbar-nav-link-padding-x: 1rem;
+
+$navbar-light-toggler-border-color: transparent;
+
+
+// Button
+$btn-font-size: 16px;
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 3rem;
+$btn-border-radius: 0px;
+
+
+// Input Form
+$input-bg: rgba(69, 97, 238, 0.12);
+$input-border-width: 0;
+$input-box-shadow: none;
+$input-btn-focus-box-shadow: none;
+$input-group-addon-color: #4561EE;
+$input-group-addon-bg: rgba(69, 97, 238, 0.12);
+
+
+// Cards
+$card-border-width: none;
+$card-border-radius: 0;
+
+// Pagination
+$pagination-color: #FFF;
+$pagination-bg: transparent;
+$pagination-border-radius: 0;
+$pagination-border-color:#4561EE;
+
+$pagination-focus-color: #FFF!important;
+$pagination-focus-bg: #4561EE;
+$pagination-focus-box-shadow: none;
+
+$pagination-hover-color: #FFFFFF!important;
+$pagination-hover-bg: #4561EE;
+$pagination-hover-border-color: #4561EE;
+
+$pagination-active-color: #FFFFFF;
+$pagination-active-bg: #4561EE;
+$pagination-active-border-color:#4561EE;
+
+
+// Nav Pills
+$nav-pills-border-radius: 0px;
+$nav-pills-link-active-color: #FFF!important;
+$nav-pills-link-active-bg: #4561EE;
+
+
+// Dropdown
+$caret-width: 0;
+$dropdown-bg: #1B274F;
+$dropdown-color: #FFF;
+
+//utility
+$utilities: (
+        "opacity": (
+                property: opacity,
+                responsive: true,
+                values: (
+                        0: 0,
+                        25: .20,
+                        50: .5,
+                        70: .70,
+                        100: 1,
+                )
+        )
+);

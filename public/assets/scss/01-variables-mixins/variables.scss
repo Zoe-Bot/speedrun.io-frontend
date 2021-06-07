@@ -1,0 +1,320 @@
+// Normalize
+body {
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #4561ee!important;
+}
+
+// Links
+a {
+    color: #4561ee;
+    text-decoration: none !important;
+    &:hover {
+        color: #4561ee;
+        text-decoration: underline;
+    }
+}
+
+// Input
+input.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.20);
+}
+
+// Button
+button.btn.btn-primary {
+    font-size: 13px;
+    letter-spacing: 1.25px;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        background-color: #4561ee;
+        border: 1px solid #4561ee;
+        box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
+        transform: translate(0, -5px);
+        transition: transform 0.1s ease;
+    }
+}
+
+// Global utility
+.bg-primary-transparent {
+    background-color: rgba(69, 97, 238, 0.12)!important;
+}
+
+.text-gold {
+    color: #CFC53B;
+}
+
+.text-silver {
+    color: #9F9F9F;
+}
+
+.text-bronze {
+    color: #854A1D;
+}
+
+
+// Nav
+.navbar-dark .navbar-toggler {
+    border: 0;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+nav {
+    #navbarNav.navbar-collapse {
+        // Button
+        a#login {
+            font-size: 13px;
+            letter-spacing: 1.25px;
+            &:hover,
+            &:focus,
+            &:active {
+                color: #4561ee;
+                background-color: #4561ee;
+                border: 1px solid #4561ee;
+                box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
+                transform: translate(0, -5px);
+                transition: transform 0.1s ease;
+            }
+        }
+
+        // Link
+        a#register:hover {
+            text-decoration: underline !important;
+        }
+    }
+}
+
+// Button with gradient
+/*
+    Write outer: div class = gradient-button
+    Write inner: a class = skew fix (this is neccessary)
+*/
+.gradient-button {
+    display: inline-block;
+    transform: skew(-15deg);
+    padding: 0.75em 2.5em;
+    background: rgb(220, 89, 203);
+    background: linear-gradient(
+        71deg,
+        rgba(220, 89, 203, 1) 0%,
+        rgba(190, 122, 242, 1) 35%,
+        rgba(87, 235, 230, 1) 100%
+    );
+    border: none;
+    .skew-fix {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        transform: skew(15deg);
+        border: none;
+    }
+}
+
+// Form
+#login-form {
+    #form-grid-password {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        input {
+            grid-column: 1 / 3;
+        }
+    }
+}
+
+// Login
+.login-form-container {
+    width: 600px;
+}
+
+@media (max-width: 992px) {
+    .login-form-container {
+        width: 100%;
+    }
+}
+
+// Register
+input.form-check-input:checked {
+    background-color: #4561ee;
+}
+
+// Profile
+#navbar-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-size: contain;
+}
+
+#profile-info {
+    display: grid;
+    grid-template-columns: 142px 1fr;
+    column-gap: 20px;
+    div#profile-avatar {
+        background: linear-gradient(
+            71deg,
+            rgba(220, 89, 203, 1) 0%,
+            rgba(190, 122, 242, 1) 35%,
+            rgba(87, 235, 230, 1) 100%
+        );
+        width: 130px;
+        height: 130px;
+        margin: 0.25rem;
+    }
+    #info {
+        div {
+            display: flex;
+        }
+    }
+    h6 {
+        width: 70px;
+        height: 30px;
+        font-size: 13px;
+        align-self: center;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    #profile-info {
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        div#profile-avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0.25rem;
+        }
+    }
+}
+
+#statistics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+@media (max-width: 500px) {
+    #statistics {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+}
+
+#most-played-map {
+    display: flex;
+    align-items: center;
+    div#most-played-map-image {
+        background: linear-gradient(
+            71deg,
+            rgba(220, 89, 203, 1) 0%,
+            rgba(190, 122, 242, 1) 35%,
+            rgba(87, 235, 230, 1) 100%
+        );
+        width: 100px;
+        height: 100px;
+        margin-left: 1rem;
+    }
+}
+
+#highscores {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 1fr;
+    align-items: center;
+    div#highscores-image {
+        background: linear-gradient(
+            71deg,
+            rgba(220, 89, 203, 1) 0%,
+            rgba(190, 122, 242, 1) 35%,
+            rgba(87, 235, 230, 1) 100%
+        );
+        width: 80px;
+        height: 80px;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #highscores {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        #map {
+            grid-column: 1 / 3;
+            padding-bottom: 1rem;
+        }
+        #place {
+            grid-row: 2/3;
+            padding-left: 1rem;
+            grid-column: 1/2;
+        }
+        #time {
+            width: 120px;
+            height: 50px;
+            grid-row: 2/3;
+            grid-column: 2/3;
+            justify-self: flex-end;
+        }
+    }
+}
+
+
+// Maps
+#card-img {
+    background: #4561ee;
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+// Maps Overview
+#highscores-overview {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr 1fr 1fr 3fr;
+    align-items: center;
+}
+
+#single-map-img {
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 500px) {
+    #highscores-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        #map {
+            grid-column: 1 / 3;
+            padding-bottom: 1rem;
+        }
+        #place {
+            grid-row: 2/3;
+            padding-left: 1rem;
+            grid-column: 1/2;
+        }
+        #time {
+            width: 120px;
+            height: 50px;
+            grid-row: 2/3;
+            grid-column: 2/3;
+            justify-self: flex-end;
+        }
+    }
+}

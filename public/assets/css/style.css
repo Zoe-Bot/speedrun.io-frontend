@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Categories 01 to 03 are the basics. */
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap");
 body {
   letter-spacing: 1px;
@@ -264,6 +265,10 @@ input.form-check-input:checked {
     justify-self: flex-end;
   }
 }
+/* Category 03 can contain any default HTML element. */
+/* Category 04 contains all "bigger" components */
+/* Category 05 is for any utility classes that are not assigned to a specific component. */
+/* Bootstrap */
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
