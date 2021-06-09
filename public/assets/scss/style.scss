@@ -6,12 +6,17 @@
 
 /* Category 03 can contain any default HTML element. */
 @import "03-elements/forms";
+@import "03-elements/input";
 @import "03-elements/links";
+@import "03-elements/button";
 
 /* Category 04 contains all "bigger" components */
+@import "04-components/gradient-button";
+@import "04-components/navigation";
 
 /* Category 05 is for any utility classes that are not assigned to a specific component. */
-
+@import "05-utilities/background";
+@import "05-utilities/text-color";
 
 /* Bootstrap */
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';

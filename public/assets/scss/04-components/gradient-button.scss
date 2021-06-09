@@ -1,0 +1,28 @@
+// Button with gradient
+/*
+    Write outer: div class = gradient-button
+    Write inner: a class = skew fix (this is neccessary)
+*/
+.gradient-button {
+    display: inline-block;
+    transform: skew(-15deg);
+    padding: 0.75em 2.5em;
+    background: rgb(220, 89, 203);
+    background: linear-gradient(
+        71deg,
+        rgba(220, 89, 203, 1) 0%,
+        rgba(190, 122, 242, 1) 35%,
+        rgba(87, 235, 230, 1) 100%
+    );
+    border: none;
+    .skew-fix {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        transform: skew(15deg);
+        border: none;
+    }
+}

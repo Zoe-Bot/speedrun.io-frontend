@@ -1,0 +1,15 @@
+// Button
+button.btn.btn-primary {
+    font-size: 13px;
+    letter-spacing: 1.25px;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        background-color: #4561ee;
+        border: 1px solid #4561ee;
+        box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
+        transform: translate(0, -5px);
+        transition: transform 0.1s ease;
+    }
+}

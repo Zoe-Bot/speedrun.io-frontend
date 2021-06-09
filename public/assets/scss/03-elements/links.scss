@@ -1,0 +1,9 @@
+// Links
+a {
+    color: #4561ee;
+    text-decoration: none !important;
+    &:hover {
+        color: #4561ee;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,11 @@
+// Normalize
+body {
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #4561ee!important;
+}
+
