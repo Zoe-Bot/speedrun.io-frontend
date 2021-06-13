@@ -1,11 +1,13 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import useState from 'react-usestateref'
+import HighscoreElement from "../components/HighscoreElement"
 import { useTitle } from "../customHooks/useTitle"
 
 const MapOverview = ({ match }) => {
     const slug = match.params.slug
     const [map, setMap, mapRef] = useState()
+    const [highscores, setHighscores, highscoresRef] = useState()
     const [loaded, setLoaded, loadedRef] = useState({
         loaded: false
     })
@@ -15,11 +17,19 @@ const MapOverview = ({ match }) => {
             const result = await fetch(`${process.env.REACT_APP_BASE_URL}/maps/${slug}?projection=author`)
             const body = await result.json()
             setMap(body)
-            setLoaded({ loaded: true })
 
+            fetchHighscores(body.id)
             console.log("map", mapRef.current)
         }
         fetchMap()
+        const fetchHighscores = async (id) => {
+            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/highscores/maps/${id}`)
+            const highscores = await result.json()
+            setHighscores(highscores)
+
+            setLoaded({ loaded: true })
+            console.log("highscore", highscoresRef.current)
+        }
     }, [slug])
 
     useTitle(mapRef.current?.name ?? 'Loading...')
@@ -42,20 +52,20 @@ const MapOverview = ({ match }) => {
                         <div className="row">
                             <div className="col-12 d-flex flex-wrap">
                                 <div className="d-flex pe-3">
-                                    <i className="fas fa-medal text-primary fs-5 pe-2"></i><p>01:32:00</p>
+                                    <i className="fas fa-medal text-primary fs-5 pe-2"></i><p>{map.medals.author}</p>
                                 </div>
                                 <div className="d-flex pe-3">
-                                    <i className="fas fa-medal text-gold fs-5 pe-2"></i><p>01:32:00</p>
+                                    <i className="fas fa-medal text-gold fs-5 pe-2"></i><p>{map.medals.gold}</p>
                                 </div>
                                 <div className="d-flex pe-3">
-                                    <i className="fas fa-medal text-silver fs-5 pe-2"></i><p>01:32:00</p>
+                                    <i className="fas fa-medal text-silver fs-5 pe-2"></i><p>{map.medals.silver}</p>
                                 </div>
                                 <div className="d-flex pe-3">
-                                    <i className="fas fa-medal text-bronze fs-5 pe-2"></i><p>01:32:00</p>
+                                    <i className="fas fa-medal text-bronze fs-5 pe-2"></i><p>{map.medals.bronze}</p>
                                 </div>
                             </div>
                             <div className="col-12 mb-2">
-                                <div id="single-map-img" style={{backgroundImage: `url(${map.thumbnail})`}} className="mb-3"></div>
+                                <div id="single-map-img" style={{ backgroundImage: `url(${map.thumbnail})` }} className="mb-3"></div>
                                 <Link className="btn btn-primary w-100 text-decoration-none" to="/game">Play map<i className="fas fa-play ps-2"></i></Link>
                             </div>
                             <div className="col-12">
@@ -105,73 +115,11 @@ const MapOverview = ({ match }) => {
                             </ul>
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
-                                    {/* Highscore element start */}
-                                    <div id="highscores-overview" className="col-12 bg-primary-transparent py-3 px-4 px-md-5">
-                                        <h2 className="display-5 fw-bolder mb-0">1.</h2>
-                                        <div id="highscores-overview-placechange" className="d-flex align-items-center">
-                                            <p className="fs-4 fw-bolder pe-2 mb-0">2</p>
-                                            <i className="fas fa-caret-up text-primary fa-2x"></i>
+                                    {highscores.map((highscore, key) => {
+                                        return <div key={key}>
+                                        <HighscoreElement position={key + 1} username={highscore.user.username} score={highscore.score}/>
                                         </div>
-                                        <div id="highscores-overview-user" className="d-flex align-items-center">
-                                            <div className="ps-3">
-                                                <small className="text-light">user</small>
-                                                <h6 className="mb-0">Zoe</h6>
-                                            </div>
-                                        </div>
-                                        <div id="highscores-overview-lvl" className="d-flex align-items-center">
-                                            <div className="ps-3">
-                                                <small className="text-light">userscore</small>
-                                                <h6 className="mb-0">10.000</h6>
-                                            </div>
-                                        </div>
-                                        <div id="time" className="text-center bg-primary py-3 me-3" style={{ width: "120px", height: "50px", justifySelf: "flex-end" }}>
-                                            <h6>01:30:001</h6>
-                                        </div>
-                                    </div>
-                                    {/* Highscore element end */}
-                                    <div id="highscores-overview" className="col-12 py-3 px-4 px-md-5">
-                                        <h2 className="display-5 fw-bolder mb-0">2.</h2>
-                                        <div id="highscores-overview-placechange" className="d-flex align-items-center">
-                                            <i className="fas fa-minus text-success fa-2x"></i>
-                                        </div>
-                                        <div id="highscores-overview-user" className="d-flex align-items-center">
-                                            <div className="ps-3">
-                                                <small className="text-light">user</small>
-                                                <h6 className="mb-0">Zoe</h6>
-                                            </div>
-                                        </div>
-                                        <div id="highscores-overview-lvl" className="d-flex align-items-center">
-                                            <div className="ps-3">
-                                                <small className="text-light">userscore</small>
-                                                <h6 className="mb-0">10.000</h6>
-                                            </div>
-                                        </div>
-                                        <div id="time" className="text-center bg-primary py-3 me-3" style={{ width: "120px", height: "50px", justifySelf: "flex-end" }}>
-                                            <h6>01:30:001</h6>
-                                        </div>
-                                    </div>
-                                    <div id="highscores-overview" className="col-12 bg-primary-transparent py-3 px-4 px-md-5">
-                                        <h2 className="display-5 fw-bolder mb-0">3.</h2>
-                                        <div id="highscores-overview-placechange" className="d-flex align-items-center">
-                                            <p className="fs-4 fw-bolder pe-2 mb-0">1</p>
-                                            <i className="fas fa-caret-down text-secondary fa-2x"></i>
-                                        </div>
-                                        <div id="highscores-overview-user" className="d-flex align-items-center">
-                                            <div className="ps-3">
-                                                <small className="text-light">user</small>
-                                                <h6 className="mb-0">Zoe</h6>
-                                            </div>
-                                        </div>
-                                        <div id="highscores-overview-lvl" className="d-flex align-items-center">
-                                            <div className="ps-3">
-                                                <small className="text-light">userscore</small>
-                                                <h6 className="mb-0">10.000</h6>
-                                            </div>
-                                        </div>
-                                        <div id="time" className="text-center bg-primary py-3 me-3" style={{ width: "120px", height: "50px", justifySelf: "flex-end" }}>
-                                            <h6>01:30:001</h6>
-                                        </div>
-                                    </div>
+                                    })}
                                 </div>
                                 <div className="tab-pane fade" id="pills-weekly" role="tabpanel" aria-labelledby="pills-weekly-tab">...</div>
                                 <div className="tab-pane fade" id="pills-monthly" role="tabpanel" aria-labelledby="pills-monthly-tab">...</div>
