@@ -38,14 +38,14 @@ const Login = (props) => {
     }
 
     return (
-        <div className="container d-flex flex-column min-vh-100 my-5 py-lg-5">
-            <div className="row login-form-container mx-auto mb-4">
+        <div  id="login" className="container d-flex flex-column min-vh-100 my-5 py-lg-5">
+            <div className="row form-container mx-auto mb-4">
                 <div className="col-12">
                     <h1 className="fst-italic">Welcome back</h1>
                     <h6 className="fst-italic">New here? <Link className="link-primary" to="/register">Register</Link></h6>
                 </div>
             </div>
-            <div className="row login-form-container mx-auto">
+            <div className="row form-container mx-auto">
                 <div className="col-12">
                     <form id="login-form" onSubmit={handleSubmit}>
                         <div className="mb-3">

@@ -34,10 +34,10 @@ const NavbarProfile = () => {
     }, [token])
 
     return (<>
-        <div className="dropdown ms-auto">
+        <div id="navbar-profile" className="dropdown ms-auto">
             <div className="d-flex align-items-center position-relative">
                 <div className="border border-3 border-primary rounded-circle p-1 me-2">
-                    <div id="navbar-profile-img" style={{backgroundImage: `url('http://picsum.photos/480/320')`}}></div>
+                    <div id="img" style={{backgroundImage: `url('http://picsum.photos/480/320')`}}></div>
                 </div>
                 <div>
                     <h6 className="text-info border-bottom border-light pb-2 pe-4">{username}</h6>

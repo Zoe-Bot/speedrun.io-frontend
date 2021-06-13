@@ -12,7 +12,9 @@
 
 /* Category 04 contains all "bigger" components */
 @import "04-components/gradient-button";
-@import "04-components/navigation";
+@import "04-components/navigation"; 
+@import "04-components/login-form"; 
+@import "04-components/navigation-profile"; 
 
 /* Category 05 is for any utility classes that are not assigned to a specific component. */
 @import "05-utilities/background";

@@ -1,11 +1,9 @@
-// Form
-#login-form {
-    #form-grid-password {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        input {
-            grid-column: 1 / 3;
-        }
+.form-container {
+    width: 600px;
+}
+
+@media (max-width: 992px) {
+    .form-container {
+        width: 100%;
     }
 }

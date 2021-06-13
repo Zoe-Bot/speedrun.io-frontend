@@ -1,133 +1,6 @@
 @charset "UTF-8";
 /* Categories 01 to 03 are the basics. */
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap");
-body {
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.dropdown-item:hover, .dropdown-item:focus {
-  background-color: #4561ee !important;
-}
-
-a {
-  color: #4561ee;
-  text-decoration: none !important;
-}
-a:hover {
-  color: #4561ee;
-  text-decoration: underline;
-}
-
-input.form-control::placeholder {
-  color: rgba(255, 255, 255, 0.2);
-}
-
-button.btn.btn-primary {
-  font-size: 13px;
-  letter-spacing: 1.25px;
-}
-button.btn.btn-primary:hover, button.btn.btn-primary:focus, button.btn.btn-primary:active {
-  color: #fff;
-  background-color: #4561ee;
-  border: 1px solid #4561ee;
-  box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
-  transform: translate(0, -5px);
-  transition: transform 0.1s ease;
-}
-
-.bg-primary-transparent {
-  background-color: rgba(69, 97, 238, 0.12) !important;
-}
-
-.text-gold {
-  color: #CFC53B;
-}
-
-.text-silver {
-  color: #9F9F9F;
-}
-
-.text-bronze {
-  color: #854A1D;
-}
-
-.navbar-dark .navbar-toggler {
-  border: 0;
-}
-.navbar-dark .navbar-toggler:focus {
-  box-shadow: none;
-}
-
-nav #navbarNav.navbar-collapse a#login {
-  font-size: 13px;
-  letter-spacing: 1.25px;
-}
-nav #navbarNav.navbar-collapse a#login:hover, nav #navbarNav.navbar-collapse a#login:focus, nav #navbarNav.navbar-collapse a#login:active {
-  color: #4561ee;
-  background-color: #4561ee;
-  border: 1px solid #4561ee;
-  box-shadow: 3px 3px 15px 4px rgba(69, 97, 238, 0.6);
-  transform: translate(0, -5px);
-  transition: transform 0.1s ease;
-}
-nav #navbarNav.navbar-collapse a#register:hover {
-  text-decoration: underline !important;
-}
-
-/*
-    Write outer: div class = gradient-button
-    Write inner: a class = skew fix (this is neccessary)
-*/
-.gradient-button {
-  display: inline-block;
-  transform: skew(-15deg);
-  padding: 0.75em 2.5em;
-  background: #dc59cb;
-  background: linear-gradient(71deg, #dc59cb 0%, #be7af2 35%, #57ebe6 100%);
-  border: none;
-}
-.gradient-button .skew-fix {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  transform: skew(15deg);
-  border: none;
-}
-
-#login-form #form-grid-password {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-#login-form #form-grid-password input {
-  grid-column: 1/3;
-}
-
-.login-form-container {
-  width: 600px;
-}
-
-@media (max-width: 992px) {
-  .login-form-container {
-    width: 100%;
-  }
-}
-input.form-check-input:checked {
-  background-color: #4561ee;
-}
-
-#navbar-profile-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  background-size: contain;
-}
-
 #profile-info {
   display: grid;
   grid-template-columns: 142px 1fr;
@@ -276,17 +149,21 @@ body {
 }
 
 /* Category 03 can contain any default HTML element. */
-#login-form #form-grid-password {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-#login-form #form-grid-password input {
-  grid-column: 1/3;
+.form-container {
+  width: 600px;
 }
 
+@media (max-width: 992px) {
+  .form-container {
+    width: 100%;
+  }
+}
 input.form-control::placeholder {
   color: rgba(255, 255, 255, 0.2);
+}
+
+input.form-check-input:checked {
+  background-color: #4561ee;
 }
 
 a {
@@ -356,6 +233,22 @@ nav #navbarNav.navbar-collapse a#login:hover, nav #navbarNav.navbar-collapse a#l
 }
 nav #navbarNav.navbar-collapse a#register:hover {
   text-decoration: underline !important;
+}
+
+#login #form-grid-password {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#login #form-grid-password input {
+  grid-column: 1/3;
+}
+
+#navbar-profile #img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-size: contain;
 }
 
 /* Category 05 is for any utility classes that are not assigned to a specific component. */
