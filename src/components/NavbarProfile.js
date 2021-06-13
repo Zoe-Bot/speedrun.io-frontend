@@ -14,7 +14,7 @@ const NavbarProfile = () => {
 
     useEffect(() => {
         const fetchUser = async () => {
-            const result = await fetch(`http://localhost:3001/v1/auth/profile`, {
+            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/auth/profile`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer ' + token.access_token

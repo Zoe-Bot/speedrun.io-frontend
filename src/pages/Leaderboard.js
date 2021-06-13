@@ -8,7 +8,8 @@ const Leaderboard = () => {
 
     useEffect(() => {
         const fetchUsers = async () => {
-            const result = await fetch(`http://localhost:3001/v1/users`)
+            console.log(process.env.REACT_APP_BASE_URL)
+            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/users`)
             const body = await result.json()
             setUsers(body)
             console.log("user", usersRef.current)

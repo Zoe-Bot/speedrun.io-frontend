@@ -12,7 +12,7 @@ const MapOverview = ({ match }) => {
 
     useEffect(() => {
         const fetchMap = async () => {
-            const result = await fetch(`http://localhost:3001/v1/maps/${slug}`)
+            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/maps/${slug}`)
             const body = await result.json()
             setMap(body[0])
             setLoaded({ loaded: true })
