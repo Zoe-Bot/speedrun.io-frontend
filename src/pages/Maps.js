@@ -8,7 +8,7 @@ const Maps = () => {
 
     useEffect(() => {
         const fetchMaps = async () => {
-            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/maps/frontend`)
+            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/maps?projection=author`)
             const body = await result.json()
             setMaps(body)
         }

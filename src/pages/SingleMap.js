@@ -12,9 +12,9 @@ const MapOverview = ({ match }) => {
 
     useEffect(() => {
         const fetchMap = async () => {
-            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/maps/${slug}`)
+            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/maps/${slug}?projection=author`)
             const body = await result.json()
-            setMap(body[0])
+            setMap(body)
             setLoaded({ loaded: true })
 
             console.log("map", mapRef.current)
@@ -34,7 +34,7 @@ const MapOverview = ({ match }) => {
                     <div className="col-12">
                         <p className="text-primary mb-1">Map</p>
                         <h1>{map.name}</h1>
-                        <p className="text-light">by <Link className="text-primary" to="/profile">Zoe</Link></p>
+                        <p className="text-light">by <span className="text-primary">{map.author.username}</span></p>
                     </div>
                 </div>
                 <div className="row">
