@@ -19,7 +19,6 @@ const MapOverview = ({ match }) => {
             setMap(body)
 
             fetchHighscores(body.id)
-            console.log("map", mapRef.current)
         }
         fetchMap()
         const fetchHighscores = async (id) => {
@@ -28,7 +27,6 @@ const MapOverview = ({ match }) => {
             setHighscores(highscores)
 
             setLoaded({ loaded: true })
-            console.log("highscore", highscoresRef.current)
         }
     }, [slug])
 
@@ -80,8 +78,8 @@ const MapOverview = ({ match }) => {
                                 <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
                                     <h6>Tags</h6>
                                     <div className="d-flex text-primary">
-                                        {map.tags.map(tag => {
-                                            return <p className="mb-0 ps-2">{tag}</p>
+                                        {map.tags.map((tag, key) => {
+                                            return <p key={key} className="mb-0 ps-2">{tag}</p>
                                         })}
                                     </div>
                                 </div>
@@ -116,9 +114,7 @@ const MapOverview = ({ match }) => {
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
                                     {highscores.map((highscore, key) => {
-                                        return <div key={key}>
-                                        <HighscoreElement position={key + 1} username={highscore.user.username} score={highscore.score}/>
-                                        </div>
+                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} score={highscore.score} />
                                     })}
                                 </div>
                                 <div className="tab-pane fade" id="pills-weekly" role="tabpanel" aria-labelledby="pills-weekly-tab">...</div>
