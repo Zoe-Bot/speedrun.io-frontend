@@ -29,7 +29,6 @@ import useToken from './customHooks/useToken'
 
 const App = () => {
     const {token, setToken} = useToken()
-    console.log("token", token)
 
     return (
         <div>

@@ -23,9 +23,6 @@ const Register = () => {
                 password
             })
         })
-        const data = await result.json()
-
-        console.log(data)
     }
 
 

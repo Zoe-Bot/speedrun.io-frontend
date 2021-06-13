@@ -20,8 +20,8 @@ const NavbarProfile = () => {
                     'Authorization': 'Bearer ' + token.access_token
                 }
             })
-            console.log('Bearer ' + token.access_token)
-            console.log(result.status)
+            //console.log('Bearer ' + token.access_token)
+            //console.log(result.status)
             if (result.status == 401) {
                 localStorage.clear()
                 return props.history.push('/error')

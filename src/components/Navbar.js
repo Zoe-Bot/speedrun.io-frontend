@@ -7,7 +7,6 @@ import useToken from '../customHooks/useToken'
 
 const NavBar = () => {
     const {token, setToken} = useToken()
-    console.log(token)
 
     return (<nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div className="container mt-3 mb-4">

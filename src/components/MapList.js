@@ -10,7 +10,7 @@ const MapList = () => {
             const result = await fetch(`${process.env.REACT_APP_BASE_URL}/maps/frontend`)
             const body = await result.json()
             setMaps(body)
-            console.log(mapsRef.current)
+            //console.log(mapsRef.current)
         }
         fetchMaps()
     }, [])
