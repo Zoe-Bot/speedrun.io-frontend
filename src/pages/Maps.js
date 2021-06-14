@@ -32,13 +32,13 @@ const Maps = () => {
                             </form>
                         </div>
                         <div className="col-12 col-lg-4 d-flex justify-content-end align-items-center">
-                            <p className="mb-0 pe-2">Sort by</p>
                             <div className="dropdown">
-                                <a className="dropdown-toggle text-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Default</a>
+                                <a className="dropdown-toggle text-white" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Sort by <span className="text-primary">Default</span></a>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">Rating High - Low</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">Rating Low - High</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">A-Z</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">Z-A</a></li>
                                 </ul>
                             </div>
                         </div>
