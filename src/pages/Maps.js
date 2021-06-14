@@ -46,7 +46,7 @@ const Maps = () => {
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
                         {maps && maps.map((map, key) => {
                             return <div key={key} className="col mb-3">
-                                <Card headline={map.name} thumbnail={map.thumbnail} subline={map.difficulty} link={`/maps/${map.slug}`} />
+                                <Card headline={map.name} thumbnail={map.thumbnail} subline={map.difficulty} link={`/maps/${map.slug}`} upvotes={13} />
                             </div>
                         })}
                     </div>
