@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import useState from 'react-usestateref'
-import avatar from '../assets/img/avatar.png'
 import ProfileHighscoreElement from "../components/ProfileHighscoreElement"
 import { useTitle } from "../customHooks/useTitle"
 import useToken from '../customHooks/useToken'
