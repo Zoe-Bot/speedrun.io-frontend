@@ -129,7 +129,7 @@ const MapOverview = ({ match }) => {
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
                                     {highscores.map((highscore, key) => {
-                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
+                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={"lvl 13"} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
                                     })}
                                 </div>
                                 <div className="tab-pane fade" id="pills-weekly" role="tabpanel" aria-labelledby="pills-weekly-tab">...</div>
