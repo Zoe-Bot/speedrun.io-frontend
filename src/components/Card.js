@@ -8,7 +8,7 @@ const Card = ({headline, subline, link, thumbnail, upvotes}) => (
             <small className="text-muted">{subline}</small>
             <h5 className="card-title">{headline}</h5>
             <div className="d-flex align-items-baseline">
-                <p>{upvotes}</p>
+                <p className="mb-0">{upvotes}</p>
                 <i className="fas fa-caret-up text-primary fs-4 ps-1"></i>
                 <Link className="ms-auto stretched-link link-primary" to={link}></Link>
             </div>
