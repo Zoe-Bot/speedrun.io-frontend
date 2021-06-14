@@ -1,13 +1,16 @@
 #highscores-overview {
     display: grid;
-    grid-template-columns: 0.75fr 1fr 1fr 3fr;
-    align-items: center;
+    grid-template-columns: 1fr 2fr 3fr;
+    #score {
+        justify-self: flex-end;
+        letter-spacing: 1.5px;
+    }
 }
 
 
 @media (max-width: 500px) {
     #highscores-overview {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0.75fr 3fr 1fr;
     }
 }
