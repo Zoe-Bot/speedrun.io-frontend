@@ -13,10 +13,10 @@ const Profile = (props) => {
             const result = await fetch(`${process.env.REACT_APP_BASE_URL}/auth/profile`, {
                 method: 'GET',
                 headers: {
-                    'Authorization': 'Bearer ' + token.access_token
+                    'Authorization': 'Bearer ' + token
                 }
             })
-            //console.log('Bearer ' + token.access_token)
+            console.log('Bearer ' + token)
             //console.log(result.status)
             if (result.status == 401) {
                 localStorage.clear()
