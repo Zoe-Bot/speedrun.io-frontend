@@ -4,24 +4,24 @@ import SubmitButton from '../components/SubmitButton'
 import { useTitle } from '../customHooks/useTitle'
 import useToken from '../customHooks/useToken'
 
-// TODO: Move to useEffects
-async function loginUser(credentials) {
-    let response = await fetch(`${process.env.REACT_APP_BASE_URL}/auth/login`, {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
-    })
-    let data = await response.json()
-    return data
-}
 
 const Login = (props) => {
     useTitle("Login")
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
     const { token, setToken } = useToken()
+
+    const loginUser = async (credentials) => {
+        let response = await fetch(`${process.env.REACT_APP_BASE_URL}/auth/login`, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(credentials)
+        })
+        let data = await response.json()
+        return data
+    }
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -38,7 +38,7 @@ const Login = (props) => {
     }
 
     return (
-        <div  id="login" className="container d-flex flex-column min-vh-100 my-5 py-lg-5">
+        <div id="login" className="container d-flex flex-column min-vh-100 my-5 py-lg-5">
             <div className="row form-container mx-auto mb-4">
                 <div className="col-12">
                     <h1 className="fst-italic">Welcome back</h1>
