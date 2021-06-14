@@ -71,9 +71,9 @@ const MapOverview = ({ match }) => {
                                     <h6>Difficulty</h6>
                                     <p className="mb-0">{map.difficulty}</p>
                                 </div>
-                                <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
+                                <div className="d-flex justify-content-between align-items-baseline border-bottom mt-3 pb-2">
                                     <h6>Rating</h6>
-                                    <p className="mb-0">2000 upvotes</p>
+                                    <p className="mb-0">{13}<i className="fas fa-caret-up text-primary fs-4 ps-1"></i></p>
                                 </div>
                                 <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
                                     <h6>Tags</h6>
