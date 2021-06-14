@@ -32,7 +32,7 @@ const MapOverview = ({ match }) => {
 
     useTitle(mapRef.current?.name ?? 'Loading...')
     return (
-        <div className="container fst-italic mb-5">
+        <div id="single-map" className="container fst-italic mb-5">
             {!loaded.loaded && <div className="spinner-border" role="status">
                 <span className="visually-hidden">Loading...</span>
             </div>
@@ -63,7 +63,7 @@ const MapOverview = ({ match }) => {
                                 </div>
                             </div>
                             <div className="col-12 mb-2">
-                                <div id="single-map-img" style={{ backgroundImage: `url(${map.thumbnail})` }} className="mb-3"></div>
+                                <div id="thumbnail-img" style={{ backgroundImage: `url(${map.thumbnail})` }} className="mb-3"></div>
                                 <Link className="btn btn-primary w-100 text-decoration-none" to="/game">Play map<i className="fas fa-play ps-2"></i></Link>
                             </div>
                             <div className="col-12">
@@ -114,7 +114,7 @@ const MapOverview = ({ match }) => {
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
                                     {highscores.map((highscore, key) => {
-                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} score={highscore.score} />
+                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} score={highscore.score} bgtransparent={key % 2 != 0 ? true : false} />
                                     })}
                                 </div>
                                 <div className="tab-pane fade" id="pills-weekly" role="tabpanel" aria-labelledby="pills-weekly-tab">...</div>

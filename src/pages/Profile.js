@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import useState from 'react-usestateref'
 import avatar from '../assets/img/avatar.png'
+import ProfileHighscoreElement from "../components/ProfileHighscoreElement"
 import { useTitle } from "../customHooks/useTitle"
 import useToken from '../customHooks/useToken'
 
@@ -32,12 +33,12 @@ const Profile = (props) => {
     useTitle(usernameRef.current ?? "Loading...")
 
     return (
-        <>
+        <div id="profile">
             <div className="container mb-3 mb-lg-5">
                 <div className="row">
-                    <div id="profile-info" className="col-12 col-sm-10 col-lg-6 col-xl-5 fst-italic">
+                    <div id="info-container" className="col-12 col-sm-10 col-lg-6 col-xl-5 fst-italic">
                         <div className="border border-2 border-primary">
-                            <div id="profile-avatar" style={{ backgroundImage: avatar }}></div>
+                            <div id="avatar" style={{backgroundImage: `url('http://picsum.photos/480/320')`}}></div>
                         </div>
                         <div id="info" className="d-flex flex-column justify-content-center">
                             <div className="border-bottom mb-2">
@@ -80,7 +81,7 @@ const Profile = (props) => {
                                 </div>
                             </div>
                             <div id="most-played-map" className="col-12 bg-primary-transparent py-3">
-                                <div id="most-played-map-image"></div>
+                                <div id="most-played-map-image" style={{backgroundImage: `url('http://picsum.photos/480/320')`}}></div>
                                 <div className="ps-3">
                                     <h6>Most played map</h6>
                                     <h4>Super Mario</h4>
@@ -89,77 +90,14 @@ const Profile = (props) => {
                         </div>
                         <div className="col-12 col-lg-7 col-xl-8">
                             <h3 className="pb-2">Highscores</h3>
-                            {/* Highscore element start */}
-                            <div id="highscores" className="col-12 bg-primary-transparent py-3">
-                                <div id="map" className="d-flex align-items-center">
-                                    <div id="highscores-image"></div>
-                                    <div className="ps-3">
-                                        <small className="text-muted">map</small>
-                                        <h6 className="mb-0">Super Mario</h6>
-                                    </div>
-                                </div>
-                                <div id="place" className="d-flex align-items-center justify-content-sm-center">
-                                    <h4 className="mb-0 pe-1">6.</h4>
-                                    <p className="mb-0">of 10.000</p>
-                                </div>
-                                <div id="time" className="text-center bg-primary py-3 me-3" style={{width: "120px", height: "50px", justifySelf: "flex-end"}}>
-                                    <h6>01:30:001</h6>
-                                </div>
-                            </div>
-                            {/* Highscore element end */}
-                            <div id="highscores" className="col-12 py-3">
-                                <div id="map" className="d-flex align-items-center">
-                                    <div id="highscores-image"></div>
-                                    <div className="ps-3">
-                                        <small className="text-muted">map</small>
-                                        <h6 className="mb-0">Super Mario</h6>
-                                    </div>
-                                </div>
-                                <div id="place" className="d-flex align-items-center justify-content-sm-center">
-                                    <h4 className="mb-0 pe-1">6.</h4>
-                                    <p className="mb-0">of 10.000</p>
-                                </div>
-                                <div id="time" className="text-center bg-primary py-3 me-3" style={{width: "120px", height: "50px", justifySelf: "flex-end"}}>
-                                    <h6>01:30:001</h6>
-                                </div>
-                            </div>
-                            <div id="highscores" className="col-12 bg-primary-transparent py-3">
-                                <div id="map" className="d-flex align-items-center">
-                                    <div id="highscores-image"></div>
-                                    <div className="ps-3">
-                                        <small className="text-muted">map</small>
-                                        <h6 className="mb-0">Super Mario</h6>
-                                    </div>
-                                </div>
-                                <div id="place" className="d-flex align-items-center justify-content-sm-center">
-                                    <h4 className="mb-0 pe-1">6.</h4>
-                                    <p className="mb-0">of 10.000</p>
-                                </div>
-                                <div id="time" className="text-center bg-primary py-3 me-3" style={{width: "120px", height: "50px", justifySelf: "flex-end"}}>
-                                    <h6>01:30:001</h6>
-                                </div>
-                            </div>
-                            <div id="highscores" className="col-12 py-3">
-                                <div id="map" className="d-flex align-items-center">
-                                    <div id="highscores-image"></div>
-                                    <div className="ps-3">
-                                        <small className="text-muted">map</small>
-                                        <h6 className="mb-0">Super Mario</h6>
-                                    </div>
-                                </div>
-                                <div id="place" className="d-flex align-items-center justify-content-sm-center">
-                                    <h4 className="mb-0 pe-1">6.</h4>
-                                    <p className="mb-0">of 10.000</p>
-                                </div>
-                                <div id="time" className="text-center bg-primary py-3 me-3" style={{width: "120px", height: "50px", justifySelf: "flex-end"}}>
-                                    <h6>01:30:001</h6>
-                                </div>
-                            </div>
+                            <ProfileHighscoreElement />
+                            <ProfileHighscoreElement bgtransparent={true} />
+                            <ProfileHighscoreElement />
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
