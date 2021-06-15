@@ -23,6 +23,7 @@ import Error from './pages/Error'
 import NavBar from './components/Navbar'
 import Footer from './components/Footer'
 import PrivateRoute from './components/PrivateRoute'
+import LoggedInRoute from './components/LoggedInRoute'
 
 //Custom Hook
 import useToken from './customHooks/useToken'
@@ -40,8 +41,8 @@ const App = () => {
                     <PrivateRoute path="/profile" component={Profile}/>
                     <Route path="/maps/:slug" component={SingleMap} />
                     <Route path="/maps" component={Maps} />
-                    <Route path="/register" component={Register} />
-                    <Route path="/login" component={Login}/>
+                    <LoggedInRoute path="/register" component={Register} />
+                    <LoggedInRoute path="/login" component={Login}/>
                     <Route path="/error" component={Error} />
                     <Route path="/" component={Index} exact />
                     <Route component={Error} />
