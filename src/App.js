@@ -37,7 +37,10 @@ const App = () => {
             <NavBar />
                 <Switch>
                     <Route path="/leaderboard" component={Leaderboard}/>
-                    <Route path="/game" component={Game}/>
+                    <Route path="/game" component={() => {
+                        window.open('/game.html', '_blank');
+                        return null;
+                    }} />
                     <PrivateRoute path="/profile" component={Profile}/>
                     <Route path="/maps/:slug" component={SingleMap} />
                     <Route path="/maps" component={Maps} />

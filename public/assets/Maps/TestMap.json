@@ -172,6 +172,18 @@
                  "width":0,
                  "x":530,
                  "y":338
+                }, 
+                {
+                 "height":0,
+                 "id":26,
+                 "name":"FlyingEnemy",
+                 "point":true,
+                 "rotation":0,
+                 "type":"Enemy",
+                 "visible":true,
+                 "width":0,
+                 "x":955,
+                 "y":303
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -180,7 +192,7 @@
          "y":0
         }],
  "nextlayerid":5,
- "nextobjectid":26,
+ "nextobjectid":27,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.5.0",
