@@ -25,11 +25,7 @@ import Footer from './components/Footer'
 import PrivateRoute from './components/PrivateRoute'
 import LoggedInRoute from './components/LoggedInRoute'
 
-//Custom Hook
-import useToken from './customHooks/useToken'
-
 const App = () => {
-    const {token, setToken} = useToken()
 
     return (
         <div>

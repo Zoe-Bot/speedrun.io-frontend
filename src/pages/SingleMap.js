@@ -13,6 +13,9 @@ const MapOverview = ({ match }) => {
     })
 
     const msToTime = (s) => {
+        if (s < 0)
+            return "invalid score"
+
         const ms = s % 1000;
         s = (s - ms) / 1000;
         const secs = s % 60;
