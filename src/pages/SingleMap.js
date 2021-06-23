@@ -40,8 +40,25 @@ const MapOverview = ({ match }) => {
         }
         fetchMap()
         const fetchHighscores = async (id) => {
-            const result = await fetch(`${process.env.REACT_APP_BASE_URL}/highscores/maps/${id}`)
-            const highscores = await result.json()
+            const resultDay = await fetch(`${process.env.REACT_APP_BASE_URL}/highscores/maps/${id}?interval=day`)
+            const highscoresDay = await resultDay.json()
+
+            const resultWeek = await fetch(`${process.env.REACT_APP_BASE_URL}/highscores/maps/${id}?interval=week`)
+            const highscoresWeek = await resultWeek.json()
+
+            const resultMonth = await fetch(`${process.env.REACT_APP_BASE_URL}/highscores/maps/${id}?interval=month`)
+            const highscoresMonth = await resultMonth.json()
+
+            const resultForever = await fetch(`${process.env.REACT_APP_BASE_URL}/highscores/maps/${id}`)
+            const highscoresForever = await resultForever.json()
+
+            const highscores = {
+                highscoresDay,
+                highscoresWeek,
+                highscoresMonth,
+                highscoresForever
+            }
+
             setHighscores(highscores)
 
             setLoaded({ loaded: true })
@@ -131,13 +148,24 @@ const MapOverview = ({ match }) => {
                             </ul>
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
-                                    {highscores.map((highscore, key) => {
-                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={"lvl 13"} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
+                                    {highscores.highscoresDay.map((highscore, key) => {
+                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={`lvl ${Math.floor(Math.random() * 10)}`} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
                                     })}
                                 </div>
-                                <div className="tab-pane fade" id="pills-weekly" role="tabpanel" aria-labelledby="pills-weekly-tab">...</div>
-                                <div className="tab-pane fade" id="pills-monthly" role="tabpanel" aria-labelledby="pills-monthly-tab">...</div>
-                                <div className="tab-pane fade" id="pills-forever" role="tabpanel" aria-labelledby="pills-forever-tab">...</div>
+                                <div className="tab-pane fade" id="pills-weekly" role="tabpanel" aria-labelledby="pills-weekly-tab">
+                                    {highscores.highscoresWeek.map((highscore, key) => {
+                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={`lvl ${Math.floor(Math.random() * 10)}`} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
+                                    })}
+                                </div>
+                                <div className="tab-pane fade" id="pills-monthly" role="tabpanel" aria-labelledby="pills-monthly-tab">
+                                    {highscores.highscoresMonth.map((highscore, key) => {
+                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={`lvl ${Math.floor(Math.random() * 20)}`} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
+                                    })}
+                                </div>
+                                <div className="tab-pane fade" id="pills-forever" role="tabpanel" aria-labelledby="pills-forever-tab">
+                                    {highscores.highscoresForever.map((highscore, key) => {
+                                        return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={`lvl ${Math.floor(Math.random() * 30)}`} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
+                                    })}</div>
                             </div>
                         </div>
                     </div>
