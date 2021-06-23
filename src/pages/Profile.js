@@ -16,7 +16,7 @@ const Profile = (props) => {
                     'Authorization': 'Bearer ' + token
                 }
             })
-            console.log('Bearer ' + token)
+            //console.log('Bearer ' + token)
             //console.log(result.status)
             if (result.status == 401) {
                 localStorage.clear()
