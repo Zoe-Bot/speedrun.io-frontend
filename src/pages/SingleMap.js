@@ -108,7 +108,7 @@ const MapOverview = ({ match }) => {
                                 </div>
                                 <div className="d-flex justify-content-between align-items-baseline border-bottom mt-3 pb-2">
                                     <h6>Rating</h6>
-                                    <p className="mb-0">{13}<i className="fas fa-caret-up text-primary fs-4 ps-1"></i></p>
+                                    <p className="mb-0">{map.upvotes}<i className="fas fa-caret-up text-primary fs-4 ps-1"></i></p>
                                 </div>
                                 <div className="d-flex justify-content-between border-bottom mt-3 pb-2">
                                     <h6>Tags</h6>
@@ -134,7 +134,7 @@ const MapOverview = ({ match }) => {
                             <h4>Highscores</h4>
                             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li className="nav-item border border-primary mb-3 mb-sm-0 me-3" role="presentation">
-                                    <button className="nav-link text-primary px-4 active" id="pills-daily-tab" data-bs-toggle="pill" data-bs-target="#pills-daily" type="button" role="tab" aria-controls="pills-daily" aria-selected="true">Daily</button>
+                                    <button className="nav-link text-primary px-4" id="pills-daily-tab" data-bs-toggle="pill" data-bs-target="#pills-daily" type="button" role="tab" aria-controls="pills-daily" aria-selected="true">Daily</button>
                                 </li>
                                 <li className="nav-item border border-primary mb-3 mb-sm-0 me-3" role="presentation">
                                     <button className="nav-link text-primary px-4" id="pills-weekly-tab" data-bs-toggle="pill" data-bs-target="#pills-weekly" type="button" role="tab" aria-controls="pills-weekly" aria-selected="false">Weekly</button>
@@ -143,11 +143,11 @@ const MapOverview = ({ match }) => {
                                     <button className="nav-link text-primary px-4" id="pills-monthly-tab" data-bs-toggle="pill" data-bs-target="#pills-monthly" type="button" role="tab" aria-controls="pills-monthly" aria-selected="false">Monthly</button>
                                 </li>
                                 <li className="nav-item border border-primary mb-3 mb-sm-0 me-3" role="presentation">
-                                    <button className="nav-link text-primary px-4" id="pills-forever-tab" data-bs-toggle="pill" data-bs-target="#pills-forever" type="button" role="tab" aria-controls="pills-forever" aria-selected="false">Forever</button>
+                                    <button className="nav-link text-primary px-4 active" id="pills-forever-tab" data-bs-toggle="pill" data-bs-target="#pills-forever" type="button" role="tab" aria-controls="pills-forever" aria-selected="false">Forever</button>
                                 </li>
                             </ul>
                             <div className="tab-content" id="pills-tabContent">
-                                <div className="tab-pane fade show active" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
+                                <div className="tab-pane fade" id="pills-daily" role="tabpanel" aria-labelledby="pills-daily-tab">
                                     {highscores.highscoresDay.map((highscore, key) => {
                                         return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={`lvl ${Math.floor(Math.random() * 10)}`} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
                                     })}
@@ -162,7 +162,7 @@ const MapOverview = ({ match }) => {
                                         return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={`lvl ${Math.floor(Math.random() * 20)}`} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
                                     })}
                                 </div>
-                                <div className="tab-pane fade" id="pills-forever" role="tabpanel" aria-labelledby="pills-forever-tab">
+                                <div className="tab-pane fade show active" id="pills-forever" role="tabpanel" aria-labelledby="pills-forever-tab">
                                     {highscores.highscoresForever.map((highscore, key) => {
                                         return <HighscoreElement key={key} position={key + 1} username={highscore.user.username} userlevel={`lvl ${Math.floor(Math.random() * 30)}`} score={msToTime(highscore.score)} bgtransparent={key % 2 != 0 ? true : false} />
                                     })}</div>
