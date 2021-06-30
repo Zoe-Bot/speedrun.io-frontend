@@ -1,0 +1,12 @@
+stages:
+  - max
+
+max: 
+  stage: max
+  image: node:alpine
+  script:
+    - echo "Für den Haken :)"
+  only:
+    - master
+
+  
