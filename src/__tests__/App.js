@@ -1,5 +1,6 @@
 import { fireEvent, getByPlaceholderText, getByText, render, screen } from '@testing-library/react';
 import App from '../App';
+import Login from '../pages/Login'
 // https://testing-library.com/docs/react-testing-library/cheatsheet
 
 
