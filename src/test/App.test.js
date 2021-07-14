@@ -1,6 +1,12 @@
 import { fireEvent, getByPlaceholderText, getByText, render, screen } from '@testing-library/react';
-import App from './App';
+import App from '../App';
+import Login from '../pages/Login'
 // https://testing-library.com/docs/react-testing-library/cheatsheet
+
+
+beforeAll(() => {
+
+})
 
 beforeEach(() => {
 	render(<App />)
@@ -18,11 +24,11 @@ test('should switch to login page', async () => {
 })
 
 test('should fail login', async () => {
-		// Enters data into input vield
-		fireEvent.change(screen.getByPlaceholderText(/Username/i), { target: { value: 'Username' } })
-		fireEvent.change(screen.getByPlaceholderText(/Password.../i), { target: { value: '1234' } })
-		
-		fireEvent.click(screen.getByText(/Sign in/i))
-		const errorMessage = await screen.findByText(/Wrong username or password!/i)
-		expect(errorMessage).toHaveClass("invalid-feedback")	
+	// Enters data into input field
+	fireEvent.change(screen.getByPlaceholderText(/Username/i), { target: { value: 'Username' } })
+	fireEvent.change(screen.getByPlaceholderText(/Password.../i), { target: { value: '1234' } })
+
+	fireEvent.click(screen.getByText(/Sign in/i))
+	const errorMessage = await screen.findByText(/Wrong username or password!/i)
+	expect(errorMessage).toHaveClass("invalid-feedback")
 })
