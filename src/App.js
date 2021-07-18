@@ -10,7 +10,6 @@ import 'bootstrap';
 
 // Pages
 import Index from './pages/Index'
-import Game from './pages/Game';
 import Leaderboard from './pages/Leaderboard';
 import Maps from './pages/Maps'
 import SingleMap from './pages/SingleMap'
